@@ -1,0 +1,176 @@
+.b-banners {
+  position: relative;
+
+  &__city-phone {
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    color: #fff;
+    padding: 0 22px;
+    box-sizing: border-box;
+
+    & > * {
+      line-height: 22px;
+      font-size: 16px;
+      font-weight: 600;
+
+      &:nth-child(2) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 30px;
+    left: 22px;
+  }
+
+  &__title, &__text {
+    color: #fff;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__btn {
+    margin-top: 38px;
+    width: 176px;
+
+    @include sm-block() {
+      margin-top: 52px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    margin-bottom: 26px;
+
+    @include sm-block() {
+      font-size: 64px;
+      margin-bottom: 19px;
+    }
+
+    &--small {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 120%;
+
+      @include xs-block() {
+        margin-bottom: 17px;
+      }
+
+      @include sm-block() {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 100%;
+
+    &--lh-128 {
+      line-height: 128%;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: inherit;
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &--left {
+      background-image: url("../images/banner-1--mobile.jpg");
+
+      @include sm-block() {
+        background-image: url("../images/banner-1--tablet.jpg");
+      }
+
+      @include md-block() {
+        background-image: url("../images/banner-1--desktop.jpg");
+      }
+    }
+
+    &--right {
+      background-image: url("../images/banner-2--mobile.jpg");
+
+      @include sm-block() {
+        background-image: url("../images/banner-2--tablet.jpg");
+      }
+
+      @include md-block() {
+        background-image: url("../images/banner-2--desktop.jpg");
+      }
+
+      & > * {
+        left: 16px;
+
+        @include sm-block() {
+          left: 22px;
+        }
+      }
+    }
+  }
+
+  @include sm-block() {
+    padding-top: 24px;
+  }
+
+  @include md-block() {
+    padding-top: 15px;
+  }
+
+  &__left {
+    @include col();
+    @include size(12);
+    @include size-md(8);
+
+    @include xs-block() {
+      height: 352px;
+    }
+
+    @include sm-block() {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include md-block() {
+      height: 360px;
+    }
+  }
+
+  &__right {
+    @include col();
+    @include size(12);
+    @include size-md(4);
+
+    height: 360px;
+
+    @include xs-block() {
+      padding: 12px 6px 0px 6px;
+    }
+
+    @include sm-block() {
+      padding: 24px 0 0 0;
+      height: 200px;
+    }
+
+    @include md-block() {
+      padding-top: 0;
+      height: 360px;
+    }
+  }
+}

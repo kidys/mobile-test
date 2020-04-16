@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UI Kit</title>
+    <style>
+        .colors {
+            padding: 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 43px;
+            border: 1px solid transparent;
+        }
+    </style>
+</head>
+<body>
+<div class="debug" style="display: none">
+    <div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<div class="ui-kit">
+    <div class="ui-kit-wrapper">
+        <div class="ui-kit__content">
+            <div class="ui-kit__row">
+                <h2 class="ui-kit__title">Кнопки</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col">
+                            <h3>Зеленая кнопка (default, hover, pressed, disabled)</h3>
+                            <div>
+                                <a href="#" class="button button--green" style="width: 88px;text-transform: uppercase">Кнопка</a>
+                                &nbsp;
+                                <a href="#" class="button button--green_disabled" style="width: 88px;text-transform: uppercase">Кнопка</a>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>Синяя кнопка (default, hover, pressed, disabled)</h3>
+                            <div>
+                                <a href="#" class="button button--blue" style="width: 88px;text-transform: uppercase">Кнопка</a>
+                                &nbsp;
+                                <a href="#" class="button button--blue_disabled" style="width: 88px;text-transform: uppercase">Кнопка</a>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>Прозрачная кнопка (default, hover, pressed, disabled)</h3>
+                            <div>
+                                <a href="#" class="button button--outlined" style="width: 88px;text-transform: uppercase">Кнопка</a>
+                                &nbsp;
+                                <a href="#" class="button button--outlined_disabled" style="width: 88px;text-transform: uppercase">Кнопка</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-kit__row">
+                <h2 class="ui-kit__title">Чекбоксы и Радиокнопки</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col">
+                            <h3>Чекбокс (default, hover, pressed, disabled)</h3>
+                            <div>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkbox__checkmark"></span>
+                                    <span class="checkbox__title">checkbox</span>
+                                </label>
+                                &nbsp;&nbsp;
+                                <label class="checkbox-container checkbox-container--disabled">
+                                    <input type="checkbox">
+                                    <span class="checkbox__checkmark"></span>
+                                    <span class="checkbox__title">checkbox</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>Радиокнопка (default, hover, pressed, disabled)</h3>
+                            <div>
+                                <div class="radiobutton-group">
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="radiobutton">
+                                        <span class="checkbox__checkmark"></span>
+                                        <span class="checkbox__title">radiobutton</span>
+                                    </label>
+                                    &nbsp;&nbsp;
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="radiobutton">
+                                        <span class="checkbox__checkmark"></span>
+                                        <span class="checkbox__title">radiobutton</span>
+                                    </label>
+                                    &nbsp;&nbsp;
+                                    <label class="checkbox-container">
+                                        <input type="radio" name="radiobutton" checked>
+                                        <span class="checkbox__checkmark"></span>
+                                        <span class="checkbox__title">radiobutton</span>
+                                    </label>
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="radiobutton-group">
+                                    <label class="checkbox-container checkbox-container--disabled">
+                                        <input type="checkbox">
+                                        <span class="checkbox__checkmark"></span>
+                                        <span class="checkbox__title">radiobutton</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-kit__row">
+                <h2 class="ui-kit__title">Основные цвета</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content" style="justify-content: flex-start">
+                        <div class="ui-kit__col">
+                            <h3>main color</h3>
+                            <div>
+                                <span class="colors" style="background-color: #5BC815;color: #333">#5BC815</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>accent/button/links main color</h3>
+                            <div>
+                                <span class="colors" style="background-color: #28009F;color: #fff">#28009F</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>main bg color</h3>
+                            <div>
+                                <span class="colors"
+                                      style="background-color: #FFFFFF;color: #333;border-color: #E9E9E9">#FFFFFF</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>main txt color</h3>
+                            <div>
+                                <span class="colors" style="background-color: #3F3D56;color: #fff">#3F3D56</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>color for cards</h3>
+                            <div>
+                                <span class="colors"
+                                      style="background-color: #FDFDFD;color: #333;border-color: #9C9C9C">#FDFDFD</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>color for lines</h3>
+                            <div>
+                                <span class="colors" style="background-color: #ECECEC;color: #333">#ECECEC</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>color for disable txt</h3>
+                            <div>
+                                <span class="colors"
+                                      style="background-color: #9C9C9C;color: #333;">#9C9C9C</span>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>good’s title and price</h3>
+                            <div>
+                                <span class="colors" style="background-color: #0D4494;color: #fff">#0D4494</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-kit__row">
+                <h2 class="ui-kit__title">Поле ввода</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col">
+                            <h3>default input</h3>
+                            <div>
+                                <div class="form-input">
+                                    <input type="text" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>input & label</h3>
+                            <div>
+                                <label class="form-input form-input--label">
+                                    <span class="form-input__title">Label</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>disabled input</h3>
+                            <div>
+                                <div class="form-input form-input--disabled">
+                                    <input disabled type="text" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-kit__row">
+                <h2 class="ui-kit__title">Выпадающий список</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col">
+                            <h3>types</h3>
+                            <div>
+                                <div class="select-component">
+                                    <div class="select-component__title">Label</div>
+                                    <select>
+                                        <option value="1">select 01</option>
+                                        <option value="2">select 02</option>
+                                        <option value="3">select 03</option>
+                                        <option value="4">select 04</option>
+                                        <option value="5">select 05</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-kit__col">
+                            <h3>types</h3>
+                            <div>
+                                <div class="select-component">
+                                    <div class="select-component__title">Label</div>
+                                    <select>
+                                        <option value="0" disabled selected>Select smth</option>
+                                        <option value="1">select 01</option>
+                                        <option value="2">select 02</option>
+                                        <option value="3">select 03</option>
+                                        <option value="4">select 04</option>
+                                        <option value="5">select 05</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ui-kit__row mobile mobile--hidden">
+                <h2 class="ui-kit__title">Панель навигации</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col ui-kit__col--full_width">
+                            <h3>top navigation</h3>
+                            <div>
+                                <nav class="top-navigation animated">
+                                    <div class="top-navigation-wrapper">
+                                        <div class="top-navigation__menu-list">
+                                            <ul class="top-navigation__content">
+                                                <li><a href="#" class="top-navigation__content-link top-navigation__content-link--active">Магазин</a></li>
+                                                <li class="top-navigation__item top-navigation__item--important"><a href="#">Акции</a></li>
+                                                <li><a href="#">Санобработка</a></li>
+                                                <li><a href="#">Отзывы</a></li>
+                                                <li><a href="#">Преимущества</a></li>
+                                                <li><a href="#">О компании</a></li>
+                                                <li><a href="#">Блог</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-kit__row">
+                <h2 class="ui-kit__title">Ссылки</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col">
+                            <h3>link/link disabled</h3>
+                            <div>
+                                <a href="#" class="link">Пункты продаж</a>
+                                &nbsp;&nbsp;
+                                <a href="#" class="link link--disabled">Пункты продаж</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ui-kit__row mobile mobile--hidden">
+                <h2 class="ui-kit__title">Хлебные крошки</h2>
+                <ul class="ui-kit__list">
+                    <li class="ui-kit__content">
+                        <div class="ui-kit__col ui-kit__col--full_width">
+                            <h3>breadcrumbs</h3>
+                            <div>
+                                <ul class="breadcrumbs">
+                                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Раздел сайта</a></li>
+                                    <li class="breadcrumbs__item breadcrumbs__item--active">Пункты продаж</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

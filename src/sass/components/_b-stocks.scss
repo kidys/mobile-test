@@ -1,0 +1,764 @@
+.stocks {
+  margin-top: 32px;
+
+  @include tablet('margin-top', 40px);
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @include tablet('padding', 0);
+  }
+
+  &__title {
+    @include col();
+    @include size-desktop(6);
+    @include size-tablet(4);
+    @include size-mobile(1);
+
+    order: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-block() {
+      justify-content: flex-start;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $colorBottomMenuTitle;
+
+      @include desktop-block() {
+        font-weight: bold;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__list {
+    @include col();
+    @include size-desktop(12);
+    @include size-tablet(8);
+    @include size-mobile(1);
+
+    order: 2;
+    margin: 15px 0;
+    height: 232px;
+    overflow: hidden;
+    position: relative;
+
+    .owl-nav {
+      position: absolute;
+      top: calc(50% - 13px);
+      line-height: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      left: 2.5%;
+    }
+
+    @include desktop-block() {
+      grid-template-columns: calc(33.33333% - 6px) calc(25% - 6px) calc(31% - 6px) calc(10.66666% - 6px);
+      grid-template-rows: 224px 176px;
+      height: 408px;
+      grid-gap: 8px;
+    }
+
+    @include tablet-block() {
+      height: 350px;
+      display: grid;
+      grid-gap: 8px;
+      grid-template-areas: "one one two two" "one one three four";
+      position: static;
+      grid-template-columns: calc(30.5% - 4px) calc(32% - 4px) calc(25% - 4px) calc(12.2% - 4px);
+      grid-template-rows: 200px 144px;
+      grid-gap: 6px;
+    }
+  }
+
+  &__item {
+    height: 232px;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+
+    /*@include desktop-block() {
+      &:nth-child(2) {
+        height: 224px;
+      }
+
+      &:nth-child(3) {
+        height: 176px;
+      }
+    }*/
+
+    h3 {
+      position: absolute;
+      margin: 0 12px 0 0;
+      bottom: 10px;
+      left: 12px;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 120%;
+      max-width: 60%;
+      color: $colorWhite;
+
+      @include desktop-block() {
+        font-weight: normal;
+      }
+
+      @include tablet-block() {
+        font-size: 20px;
+      }
+    }
+
+    @include desktop-block() {
+      &:nth-child(2) {
+        height: 224px;
+      }
+
+      &:nth-child(3) {
+        height: 176px;
+      }
+    }
+
+    @include tablet-block() {
+      position: relative;
+      //background-image: url('../images/b-stock__image-1--desktop.jpg');
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: cover;
+      height: inherit;
+
+      picture {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        height: inherit;
+        width: 100%;
+        visibility: hidden;
+      }
+
+      h3 {
+        bottom: 25px;
+        left: 25px;
+        margin: 0;
+        max-width: 80%;
+        line-height: 110%;
+      }
+
+      &:nth-child(1) {
+        grid-area: one;
+
+        h3 {
+          font-size: 32px;
+          line-height: 120%;
+        }
+      }
+
+      &:nth-child(2) {
+        grid-area: two;
+        height: 200px;
+      }
+
+      &:nth-child(3) {
+        grid-area: three;
+        height: 144px;
+      }
+
+      &:nth-child(4) {
+        grid-area: four;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: inherit;
+    }
+  }
+
+  &__btn {
+    background-color: $bgColorGreen;
+    border-radius: 4px;
+    color: $colorWhite;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-block() {
+      //width: 96px;
+      display: flex;
+      text-align: center;
+      font-size: 20px;
+      justify-content: space-evenly;
+      align-items: stretch;
+    }
+
+    @include desktop-block() {
+      /*width: 120px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;*/
+      font-size: 26px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    &-more {
+      @include col();
+      @include size-mobile(1);
+
+      order: 3;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet('display', none);
+
+      a {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: $colorBottomMenuLink;
+        width: 240px;
+        height: 56px;
+        border-radius: 28px;
+        box-sizing: border-box;
+        text-transform: initial;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px -16px;
+
+    &__item {
+      position: relative;
+      display: flex;
+      flex: 0 0 100%;
+      min-height: 184px;
+      padding: 0 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      color: $colorWhite;
+
+      &-image {
+        position: absolute;
+        top: 0;
+        left: 8px;
+        right: 8px;
+        bottom: 0;
+        z-index: 1;
+
+        picture, img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-content {
+        position: relative;
+        padding: 32px 16px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex: 1;
+        z-index: 2;
+
+        @include tablet-block() {
+          padding: 100px 36px 22px;
+        }
+      }
+
+      &-title {
+        max-width: 70%;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 8px;
+
+        @include tablet-block() {
+          font-size: 24px;
+          line-height: 24px;
+          margin-bottom: 8px;
+        }
+
+        @include desktop-block() {
+          font-size: 32px;
+          line-height: 38px;
+          margin-bottom: 18px;
+        }
+      }
+
+      &-text {
+        max-width: 70%;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 18px;
+
+        @include tablet-block() {
+          font-size: 16px;
+          line-height: 19px;
+          margin-bottom: 30px;
+        }
+      }
+
+      &-more {
+        .button {
+          font-size: 16px;
+          line-height: 16px;
+          font-weight: bold;
+          padding: 12px 14px;
+          margin-bottom: 0;
+
+          @include tablet-block() {
+            font-size: 14px;
+            line-height: 14px;
+            padding: 13px 40px;
+            font-weight: normal;
+          }
+        }
+      }
+
+      @include tablet-block() {
+        min-height: 232px;
+        flex-basis: 50%
+      }
+
+      @include desktop-block() {
+        min-height: 344px;
+      }
+    }
+
+    &--page {
+      .stocks {
+        &-list {
+          &__item {
+            min-height: 0;
+            flex: 0 1 auto;
+            flex-direction: column;
+            color: $colorMain;
+
+            @include tablet-block() {
+              &:not(:first-child) {
+                flex-basis: 50%;
+              }
+            }
+
+            @include desktop-block() {
+              &:not(:first-child) {
+                flex-basis: 33.333%;
+              }
+            }
+
+            &-image {
+              position: relative;
+              top: auto;
+              left: auto;
+              right: auto;
+              bottom: auto;
+              z-index: 1;
+
+              picture, img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            &-content {
+              background: #FFFFFF;
+              border: 1px solid rgba(156, 156, 156, 0.2);
+              box-sizing: border-box;
+              padding: 8px 16px 16px;
+              justify-content: space-between;
+            }
+
+            &-title {
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 21px;
+              margin-bottom: 8px;
+              max-width: none;
+
+              @include tablet-block() {
+                font-size: 22px;
+                line-height: 25px;
+              }
+
+              @include desktop-block() {
+                font-size: 28px;
+                line-height: 32px;
+              }
+            }
+
+            &-text {
+              font-size: 16px;
+              line-height: 18px;
+              min-height: 36px;
+              max-width: none;
+              margin-bottom: 8px;
+            }
+
+            &-more {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            &-views {
+              font-size: 16px;
+              line-height: 1;
+              color: $colorButtonDefault;
+              display: flex;
+              align-items: center;
+
+              &:before {
+                content: '';
+                background: url('../images/eye-icon.svg') no-repeat center center;
+                width: 18px;
+                height: 18px;
+                margin-right: 5px;
+              }
+            }
+
+            &:first-child {
+              flex-basis: 100%;
+
+              @include tablet-block() {
+                min-height: 370px;
+
+                .stocks-list {
+                  &__item {
+                    &-image {
+                      position: absolute;
+                      top: 0;
+                      left: 8px;
+                      right: 8px;
+                      bottom: 0;
+                    }
+
+                    &-content {
+                      color: #fff;
+                      background: transparent;
+                      border: none;
+                      padding: 100px 36px 22px;
+                    }
+
+                    &-title {
+                      font-size: 32px;
+                      line-height: 38px;
+                      margin-bottom: 16px;
+                    }
+
+                    &-text {
+                      max-width: 50%;
+                      font-size: 16px;
+                      line-height: 19px;
+                      margin-bottom: 22px;
+                    }
+
+                    &-more {
+                      justify-content: flex-start;
+
+                      .button {
+                        color: $colorWhite;
+                        background-color: transparent;
+                        border-color: $bgColorWhite;
+
+                        &:hover {
+                          background-color: $bgColorWhite;
+                          color: #5529DA;
+
+                          &:after {
+                            background-color: $bgColorWhite;
+                            opacity: 1;
+                          }
+                        }
+
+                        &:active {
+                          background-color: $bgColorWhite;
+                          color: #240C6B;
+                        }
+                      }
+                    }
+
+                    &-views {
+                      color: #fff;
+                      margin-left: 40px;
+
+                      &:before {
+                        background-image: url('../images/eye-icon-white.svg');
+                      }
+                    }
+                  }
+                }
+              }
+              @include desktop-block() {
+                min-height: 400px;
+
+                .stocks-list {
+                  &__item {
+                    &-title {
+                      font-size: 48px;
+                      line-height: 58px;
+                    }
+
+                    &-text {
+                      max-width: 50%;
+                      font-size: 24px;
+                      line-height: 29px;
+                      margin-bottom: 35px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-item {
+    &__image {
+      height: 128px;
+      margin-bottom: 26px;
+      border-radius: 4px;
+      overflow: hidden;
+
+      @include tablet-block() {
+        height: 168px;
+        margin-bottom: 16px;
+      }
+
+      picture, img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__wrapper {
+      @include row-flex();
+      height: inherit;
+      position: relative;
+      margin-bottom: 26px;
+      @include tablet('margin-bottom', 33px);
+      @include desktop('margin-bottom', 16px);
+    }
+
+    &__body {
+      @include col();
+      @include size-desktop(8);
+      @include size-tablet(5);
+      @include size-mobile(1);
+      margin-bottom: 32px;
+
+      @include tablet('margin-bottom', 0);
+    }
+
+    &__sidebar {
+      @include col();
+      @include size-desktop(4);
+      @include size-tablet(3);
+      @include size-mobile(1);
+    }
+
+    &__content {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__info {
+      margin-bottom: 40px;
+
+      @include tablet-block() {
+        background: $bgColorShoppingCartCost;
+        border: 1px solid $colorLines;
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding: 24px 16px 16px;
+        margin-bottom: 16px;
+      }
+
+      &-wrapper {
+        @include row-flex();
+      }
+
+      &-item {
+        @include col();
+        @include size-desktop(4);
+        @include size-tablet(8);
+        @include size-mobile(1);
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        @include tablet('margin-bottom', 16px);
+        @include desktop-block() {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 0;
+        }
+
+        &-img {
+          display: flex;
+          margin-right: 12px;
+
+          @include desktop-block() {
+            margin: 0 0 12px 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-block {
+    display: none;
+
+    @include desktop-block() {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -8px -16px;
+    }
+
+    &__item {
+      flex: 0 1 auto;
+      flex-direction: column;
+      color: $colorMain;
+      position: relative;
+      display: flex;
+      padding: 0 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+
+      @include tablet-block() {
+        flex-basis: 50%;
+      }
+
+      @include desktop-block() {
+        flex-basis: 33.333%;
+      }
+
+      &-image {
+        position: relative;
+        z-index: 1;
+        display: flex;
+
+        picture, img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-content {
+        background: #FFFFFF;
+        border: 1px solid rgba(156, 156, 156, 0.2);
+        box-sizing: border-box;
+        padding: 8px 16px 16px;
+        justify-content: space-between;
+      }
+
+      &-title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 8px;
+        max-width: none;
+
+        @include tablet-block() {
+          font-size: 22px;
+          line-height: 25px;
+          margin-bottom: 16px;
+        }
+
+        @include desktop-block() {
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 18px;
+        min-height: 84px;
+        max-width: none;
+        margin-bottom: 10px;
+      }
+
+      &-more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .button {
+          font-size: 16px;
+          line-height: 16px;
+          font-weight: bold;
+          padding: 12px 14px;
+          margin-bottom: 0;
+
+          @include tablet-block() {
+            font-size: 14px;
+            line-height: 14px;
+            padding: 13px 40px;
+            font-weight: normal;
+          }
+        }
+      }
+
+      &-views {
+        font-size: 16px;
+        line-height: 1;
+        color: $colorButtonDefault;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: '';
+          background: url('../images/eye-icon.svg') no-repeat center center;
+          width: 18px;
+          height: 18px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

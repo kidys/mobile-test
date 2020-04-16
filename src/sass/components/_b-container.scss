@@ -1,0 +1,10 @@
+.container {
+  @include row-flex();
+  height: inherit;
+  position: relative;
+  padding: 0 16px;
+
+  @include tablet-block() {
+    padding: 0;
+  }
+}

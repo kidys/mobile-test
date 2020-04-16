@@ -1,0 +1,315 @@
+.sanitation {
+  margin-bottom: 40px;
+
+  &__tabs {
+    display: flex;
+    border-bottom: 1px solid $colorLines;
+    margin-bottom: 24px;
+
+    @include tablet('margin-bottom', 48px);
+
+    &-item {
+      font-size: 18px;
+      line-height: 21px;
+      color: $colorButtonDefault;
+      cursor: pointer;
+      margin-bottom: -1px;
+      padding: 0 14px 12px;
+      text-align: center;
+      position: relative;
+
+      @include tablet('padding', 0 35px 12px);
+
+      &:after {
+        content: '';
+        display: block;
+        width: 60%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: transparent;
+      }
+
+      &--active {
+        font-weight: bold;
+        color: $colorGreen;
+
+        &:after {
+          background: $bgColorGreen;
+        }
+      }
+    }
+  }
+
+  &__section {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__items {
+    margin-bottom: 70px;
+
+    @include tablet('margin-bottom', 48px);
+
+    &--slider {
+      @include col();
+      @include size-desktop(12);
+      @include size-tablet(8);
+      @include size-mobile(1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      position: relative;
+      width: 100%;
+
+      .owl-nav {
+        position: absolute;
+        top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .owl-prev, .owl-next {
+          outline: none;
+          border: none;
+          background-color: transparent;
+          width: 20px;
+          height: 20px;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        img {
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .owl-dots {
+        display: none;
+      }
+
+      .owl-stage {
+        display: flex;
+      }
+
+      .owl-stage-outer {
+        overflow: hidden;
+      }
+
+      @include tablet-block() {
+        order: 3;
+      }
+
+      /*
+      .product-list {
+        &__item {
+          display: none;
+          width: 100%;
+          margin: 12px 0;
+
+          &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+            display: flex;
+          }
+
+          @include desktop-block() {
+            width: 100%;
+            margin: 22px 0;
+            display: flex;
+          }
+
+          @include tablet-block() {
+            width: 100%;
+            margin: 16px 0;
+          }
+        }
+      }
+      */
+
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-block() {
+      flex-direction: row;
+      margin-bottom: 32px;
+    }
+
+    @include desktop('margin-bottom', 24px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-image {
+      position: relative;
+      max-width: 200px;
+      margin: 0 auto 24px;
+
+      @include tablet-block() {
+        flex: 0 0 118px;
+        margin: 0 48px 0 0;
+      }
+
+      @include desktop-block() {
+        flex: 0 0 175px;
+        margin-right: 12px;
+      }
+
+      img, picture {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &-type {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        max-width: 68px;
+      }
+    }
+
+    &-content {
+      flex: 1;
+      margin-bottom: 24px;
+
+      @include tablet-block() {
+        padding-top: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    &-title {
+      font-size: 22px;
+      line-height: 25px;
+      margin-bottom: 12px;
+      font-weight: bold;
+
+      @include tablet('margin-bottom', 6px);
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 12px;
+
+      @include tablet('margin-bottom', 18px);
+      @include desktop('margin-bottom', 12px);
+    }
+
+    &-order {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include tablet-block() {
+        flex: 0 0 200px;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+
+      @include desktop-block() {
+        flex: 0 0 400px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &-price {
+      @include tablet('margin-bottom', 34px);
+      @include desktop('margin-bottom', 0);
+    }
+
+    &-button {
+      .button {
+        font-size: 16px;
+        line-height: 1;
+        padding: 12px 20px;
+      }
+    }
+  }
+
+  &__list {
+    background: $bgColorCards;
+    border: 1px solid $colorLines;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 16px;
+      padding: 16px;
+      border-bottom: 1px solid $colorLines;
+
+      @include tablet('padding', 20px 32px);
+
+      &:first-child {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-bottom: 8px;
+
+        .sanitation {
+          &__list {
+            &-title {
+              margin-bottom: 12px;
+              @include tablet('margin-bottom', 0);
+            }
+
+            &-price {
+              width: 100%;
+              @include tablet('width', auto);
+            }
+          }
+        }
+
+        @include tablet-block() {
+          padding-top: 8px;
+          align-items: center;
+          flex-direction: row;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &-title {
+      margin-right: 24px;
+    }
+
+    &-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .button {
+        font-size: 16px;
+        line-height: 1;
+        padding: 12px 20px;
+        margin-left: 16px;
+      }
+    }
+  }
+}

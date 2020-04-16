@@ -1,0 +1,64 @@
+.breadcrumbs {
+  background: $bgColorBreadcrumbs;
+
+  margin-bottom: 16px;
+  @include tablet('margin-bottom', 0);
+
+  &-wrapper {
+    @include container-wrapper();
+    height: inherit;
+  }
+
+  &__content {
+    @include col();
+    padding: 0 9px;
+
+    @include tablet('padding', 0);
+  }
+
+  &__list {
+    margin: 19px 0;
+    @include desktop('margin', 19px 0);
+    @include tablet('margin', 17px 0);
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-size: 12px;
+    line-height: 14px;
+    color: $colorBottomMenuTitle;
+    display: flex;
+
+    &:after {
+      content: "-";
+      margin: 0 5px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none
+      }
+    }
+  }
+
+  &__link {
+    color: $colorBottomMenuTitle;
+    text-decoration: underline;
+
+    &:hover {
+      color: #706D8B;
+    }
+
+    &:active {
+      color: #2C2B3F;
+    }
+
+    &--disabled {
+      color: #9C9C9C;
+    }
+  }
+
+}

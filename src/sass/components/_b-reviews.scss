@@ -1,0 +1,150 @@
+.reviews {
+  margin-top: 32px;
+  margin-bottom: 22px;
+
+  @include tablet('margin-top', 40px);
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @include tablet('padding', 0);
+  }
+
+  &__title {
+    @include col();
+    @include size-desktop(6);
+    @include size-tablet(4);
+    @include size-mobile(1);
+
+    order: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-block() {
+      justify-content: flex-start;
+    }
+
+    h3 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $colorBottomMenuTitle;
+
+      @include desktop-block() {
+        font-weight: bold;
+        line-height: 25px;
+      }
+    }
+  }
+
+  &__reviews {
+    &-list {
+      @include col();
+      @include size-desktop(12);
+      @include size-tablet(8);
+      @include size-mobile(1);
+
+      order: 2;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+
+      @include tablet-block() {
+        order: 3;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__item {
+    h4 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 0 10px 0;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 100%;
+      color: $colorBottomMenuLink;
+
+      small {
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 100%;
+        color: $colorReviewsCity;
+        margin-left: 10px;
+      }
+    }
+
+    &-text {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $colorBottomMenuTitle;
+    }
+  }
+
+  &__btn-more {
+    @include col();
+    @include size-desktop(6);
+    @include size-tablet(4);
+    @include size-mobile(1);
+
+    order: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: $colorBottomMenuLink;
+      width: 240px;
+      height: 56px;
+      border-radius: 28px;
+      box-sizing: border-box;
+      text-transform: initial;
+
+      @include tablet-block() {
+        width: 152px;
+        height: 40px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    @include tablet-block() {
+      justify-content: flex-end;
+      order: 2;
+    }
+  }
+}

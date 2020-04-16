@@ -1,0 +1,172 @@
+.top-navigation {
+  height: 40px;
+  background-color: $bgColorGreen;
+
+  & {
+    position: fixed;
+    visibility: visible;
+    z-index: 2;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 80px);
+    top: 0;
+    left: calc(200vw - 30px);
+    padding: 65px 15px 15px 15px;
+    background-color: $bgColorNavigationMobile;
+
+    @include tablet-block() {
+      position: static;
+      background-color: $bgColorGreen;
+      width: 100%;
+      height: 40px;
+      padding: 0;
+    }
+
+    &.animated--end {
+      left: 0;
+    }
+  }
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+    overflow: hidden;
+  }
+
+  &__content {
+    @include row-flex();
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 360px;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @include desktop('padding-left', 4px);
+
+    @include tablet-block() {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding-left: 3px;
+      align-items: center;
+      max-width: 80%;
+      height: inherit;
+      flex-grow: 1;
+
+      li {
+        &, a {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    li {
+      a {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $colorWhite;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__link {
+    padding: 0 13px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      @include tablet-block() {
+        background-color: $bgColorTopNavLinkHover;
+      }
+    }
+
+    &:active, &--active {
+      @include tablet-block() {
+        &, &:hover {
+          background-color: $bgColorWhite;
+          color: $colorGreen !important;
+        }
+
+        svg path {
+          fill: $colorGreen !important;
+        }
+      }
+    }
+  }
+
+  &__menu-list {
+    overflow: auto;
+    height: calc(100vh - 225px);
+
+    @include tablet-block() {
+      height: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+    }
+  }
+
+  &__mobile-top {
+    margin-top: 75px;
+
+    @include tablet-block() {
+      display: none;
+    }
+  }
+
+  &__city-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 15px;
+    background-color: $bgColorBlue;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: calc(100vw - 30px);
+    color: $colorWhite;
+
+    &-title {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &-name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 30px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__search-form {
+    margin-bottom: 30px;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    &--important {
+      a {
+        color: $colorRed !important;
+      }
+    }
+  }
+}

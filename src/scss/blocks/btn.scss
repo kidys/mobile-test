@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+  padding: 10px 16px 12px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 28px;
+  font-size: 16px;
+  line-height: 18px;
+  color: transparent;
+
+  &--primary {
+    color: $color_primary;
+    background-color: #fff;
+  }
+
+  &--order {
+    color: #fff;
+    background-color: $bgcolor_primary;
+    width: 168px;
+    justify-content: center;
+  }
+}

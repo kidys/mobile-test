@@ -1,0 +1,36 @@
+#burgerBtn {
+  border-top:2px solid #fff;
+  height:16px;
+  width:20px;
+  box-sizing:border-box;
+  position:absolute;
+  z-index:30;
+  right: 20px;
+  top: 28px;
+  cursor:pointer;
+  @include transition(all 0.3s ease-in);
+
+  &:before {
+    content:"";
+    display:block;
+    position:absolute;
+    height:2px;
+    width:inherit;
+    left:0;
+    background:#fff;
+    top:5px;
+    @include transition(all 0.3s ease-in);
+  }
+
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    height:2px;
+    width:inherit;
+    left:0;
+    background:#fff;
+    bottom:0;
+    @include transition(all 0.3s ease-in);
+  }
+}

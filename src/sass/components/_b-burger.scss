@@ -1,0 +1,63 @@
+.burger {
+  position: relative;
+  display: inline-block;
+  height: 16px;
+  width: 24px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: all 0.3s $cubic;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @include tablet('display', 'none');
+
+  &-content {
+    width: 24px;
+    height: 8px;
+    position: relative;
+    display: block;
+    margin: -6px auto 0;
+    top: 50%;
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: relative;
+    background-color: $bgColorWhite;
+    transition: all 0.3s $cubic;
+    transition-delay: 0s;
+
+    &--top {
+      transform: translateY(0px) rotate(0deg);
+    }
+
+    &--bottom {
+      transform: translateY(6px) rotate(0deg);
+    }
+  }
+
+  &--opened {
+    transform: rotate(90deg);
+
+    .burger__line {
+      transition: all 0.4s $cubic;
+      transition-delay: 0.2s;
+
+      &--top {
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &--bottom {
+        transform: translateY(3px) rotate(-45deg);
+      }
+    }
+  }
+
+  &--inverse {
+    .burger__line {
+      background-color: $bgColorBurgerInverse;
+    }
+  }
+}

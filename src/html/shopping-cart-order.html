@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оформление заказа &quot;Сестрица&quot;</title>
+</head>
+<body>
+@@include('./partials/debug.html')
+
+@@include('./partials/header.html')
+@@include('./partials/nav.html')
+@@include('./partials/order/order-breadcrumbs.html')
+
+<section class="page page--no-sidebar">
+    <div class="wrapper">
+        <div class="container">
+            <div class="page__content">
+                <div class="shopping-cart">
+                    <div class="shopping-cart__content">
+                        <div class="shopping-cart__login">
+                            <div class="shopping-cart__login-text">Если вы уже зарегистрированы на сайте, пожалуйста, введите свой email и пароль.</div>
+                            <div class="shopping-cart__login-button">
+                                <div class="shopping-cart__login-button_mobile">></div>
+                                <div class="shopping-cart__login-button_large"><a href="#" class="button button--green">Войти</a></div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__order">
+                            <div class="shopping-cart__order-tabs">
+                                <div class="shopping-cart__order-tab shopping-cart__order-tab--active"><span>1</span>&nbsp;Данные покупателя</div>
+                                <div class="shopping-cart__order-tab"><span>2</span>&nbsp;Время доставки</div>
+                                <div class="shopping-cart__order-tab"><span>3</span>&nbsp;Форма оплаты</div>
+                            </div>
+                            <div class="shopping-cart__order-step shopping-cart__order-step--01 shopping-cart__order-step--active">
+                                <div class="shopping-cart__order-item">
+                                    <div class="shopping-cart__order-title">Данные покупателя</div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <span class="form-input__title shopping-cart__order-field-label">Выберите тип пользователя</span>
+                                            <div class="radiobutton-group radiobutton-group--line">
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="customer">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Физическое лицо</span>
+                                                </label>
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="customer">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Юридическое лицо</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Имя</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Фамилия</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Email</span>
+                                                <input type="email" placeholder="youremail@hostname.ru">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field shopping-cart__order-field--note">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Номер телефона</span>
+                                                <input type="text" placeholder="+7 (___) ___ ____">
+                                            </label>
+                                            <div class="shopping-cart__order-note">
+                                                На указанный вами номер будет выслано СМС-уведомление, подтверждающее прием заказа
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field shopping-cart__order-field--note">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Комментарий</span>
+                                                <textarea></textarea>
+                                            </label>
+                                            <div class="shopping-cart__order-note">
+                                                Если вы участвуете в одной из наших акций, пожалуйста, укажите название акции в комментарии к заказу. Наш менеджер свяжется с вами для уточнения деталей.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row shopping-cart__order-row--buttons">
+                                        <button class="button button--outlined button--green shopping-cart__order-button shopping-cart__order-button--prev">Назад</button>
+                                        <button class="button button--green shopping-cart__order-button shopping-cart__order-button--next" data-step="shopping-cart__order-step--02">Вперёд</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-cart__order-step shopping-cart__order-step--02">
+                                <div class="shopping-cart__order-item">
+                                    <div class="shopping-cart__order-title">Дата и время доставки</div>
+                                    <div class="shopping-cart__order-row">
+                                        <h3 class="shopping-cart__order-subtitle">Время доставки</h3>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">День</span>
+                                                <input type="date" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Время</span>
+                                                <input type="time" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <h3 class="shopping-cart__order-subtitle">Адрес доставки</h3>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <div class="select-component select-component--wide">
+                                                <div class="select-component__title shopping-cart__order-field-label">Город</div>
+                                                <select>
+                                                    <option value="0" disabled selected>Выбрать город</option>
+                                                    <option value="1">select 01</option>
+                                                    <option value="2">select 02</option>
+                                                    <option value="3">select 03</option>
+                                                    <option value="4">select 04</option>
+                                                    <option value="5">select 05</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Улица</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Номер дома</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Корпус</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Квартира</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Этаж</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="checkbox-container checkbox-container--start">
+                                                <input type="checkbox">
+                                                <span class="checkbox__checkmark"></span>
+                                                <span class="checkbox__title">Есть работающий лифт</span>
+                                            </label>
+                                            <div class="shopping-cart__order-note">
+                                                Подъем на шестой и последующие этажи при отсутствии или неисправности лифта оплачивается дополнительно из расчета 30 (тридцать) руб./этаж за каждую бутыль.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row shopping-cart__order-row--buttons">
+                                        <button class="button button--outlined button--green shopping-cart__order-button shopping-cart__order-button--prev" data-step="shopping-cart__order-step--01">Назад</button>
+                                        <button class="button button--green shopping-cart__order-button shopping-cart__order-button--next" data-step="shopping-cart__order-step--03">Вперёд</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-cart__order-step shopping-cart__order-step--03">
+                                <div class="shopping-cart__order-item">
+                                    <div class="shopping-cart__order-title">Способ оплаты</div>
+                                    <div class="shopping-cart__order-row">
+                                        <h3 class="shopping-cart__order-subtitle">Форма оплаты</h3>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field shopping-cart__order-field--note-wide">
+                                            <div class="radiobutton-group">
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="payment">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Карта на сайте</span>
+                                                </label>
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="payment">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Наличные курьеру</span>
+                                                </label>
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="payment">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Квитанция сбербанк</span>
+                                                </label>
+                                            </div>
+                                            <div class="shopping-cart__order-note">
+                                                Вы можете оплатить заказ прямо сейчас через платежную систему PayAnyWay. К оплате принимаются банковские карты: Visa, MasterCard, электронные деньги: Webmoney. Яндекс деньги. Услуга бесплатная, никакой процент с Вас не снимается.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row shopping-cart__order-row--buttons">
+                                        <button class="button button--outlined button--green shopping-cart__order-button shopping-cart__order-button--prev" data-step="shopping-cart__order-step--02">Назад</button>
+                                        <button class="button button--green shopping-cart__order-button shopping-cart__order-button--next" data-step="shopping-cart__cost--order">Перейти к оплате</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping-cart__cost shopping-cart__cost--order">
+                        <div class="shopping-cart__cost-row">
+                            <div class="shopping-cart__cost-discount">
+                                <form class="shopping-cart__cost-discount-controls">
+                                    <label class="form-input">
+                                        <input type="text" placeholder="код скидки">
+                                    </label>
+                                    <button class="button button--default">применить</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <div class="shopping-cart__cost-value">
+                                Стоимость товара
+                                <div class="shopping-cart__cost-price">240&nbsp;₽</div>
+                            </div>
+                            <div class="shopping-cart__cost-value">
+                                Стоимость тары
+                                <div class="shopping-cart__cost-price">
+                                    <span class="shopping-cart__cost-caption">2 бутыли</span>
+                                    600&nbsp;₽
+                                </div>
+                            </div>
+                            <div class="shopping-cart__cost-value">
+                                Скидка
+                                <div class="shopping-cart__cost-price">10&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <div class="shopping-cart__cost-total">
+                                <div>Итого</div>
+                                <div>830&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <a href="#" class="button button--green button--uppercase">Оформить заказ</a>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <button class="button button--outlined button--green button--uppercase" js-popup-switcher="popup-fast-buy">Купить без регистрации</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./partials/bottom-menu.html')
+@@include('./partials/footer.html')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

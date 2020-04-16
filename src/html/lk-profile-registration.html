@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Личный кабинет - Регстрация пользователя</title>
+</head>
+<body>
+@@include('./partials/debug.html')
+
+@@include('./partials/header.html')
+@@include('./partials/nav.html')
+@@include('./partials/lk/lk-breadcrumbs.html')
+
+<section class="page page--no-sidebar">
+    <div class="wrapper">
+        <div class="container">
+            <div class="page__content">
+                <div class="page__heading">
+                    <h1>Регистрация нового пользователя</h1>
+                </div>
+                <form class="lk-registration">
+                    <div class="lk-registration__row">
+                        <div class="lk-registration__field">
+                            <div class="select-component select-component--wide">
+                                <div class="select-component__title lk-registration__field-label">Город</div>
+                                <select>
+                                    <option value="0" disabled selected>Выбрать город</option>
+                                    <option value="1">select 01</option>
+                                    <option value="2">select 02</option>
+                                    <option value="3">select 03</option>
+                                    <option value="4">select 04</option>
+                                    <option value="5">select 05</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lk-registration__row">
+                        <div class="lk-registration__field">
+                            <span class="form-input__title lk-registration__field-label">Выберите тип пользователя</span>
+                            <div class="radiobutton-group radiobutton-group--line">
+                                <label class="checkbox-container checkbox-container--start">
+                                    <input type="radio" name="customer">
+                                    <span class="checkbox__checkmark"></span>
+                                    <span class="checkbox__title">Физическое лицо</span>
+                                </label>
+                                <label class="checkbox-container checkbox-container--start">
+                                    <input type="radio" name="customer">
+                                    <span class="checkbox__checkmark"></span>
+                                    <span class="checkbox__title">Юридическое лицо</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lk-registration__row">
+                        <div class="lk-registration__field lk-registration__field--note">
+                            <label class="form-input form-input--label form-input--wide">
+                                <span class="form-input__title lk-registration__field-label">Email</span>
+                                <input type="email" placeholder="youremail@hostname.ru">
+                            </label>
+                            <div class="lk-registration__note">
+                                На указанный в форме e-mail придет запрос на подтверждение регистрации.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lk-registration__row">
+                        <div class="lk-registration__field lk-registration__field--note">
+                            <label class="form-input form-input--label form-input--wide">
+                                <span class="form-input__title lk-registration__field-label">Пароль</span>
+                                <input type="password" placeholder="">
+                            </label>
+                            <div class="lk-registration__note">
+                                Пароль должен быть не менее 6 символов длиной.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lk-registration__row">
+                        <div class="lk-registration__field">
+                            <label class="form-input form-input--label form-input--wide">
+                                <span class="form-input__title lk-registration__field-label">Подтвердите пароль</span>
+                                <input type="password" placeholder="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="lk-registration__row">
+                        <div class="lk-registration__field lk-registration__field--button">
+                            <button type="submit" class="button button--green">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./partials/bottom-menu.html')
+@@include('./partials/footer.html')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

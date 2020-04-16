@@ -1,0 +1,86 @@
+.download-app {
+  background-color: $bgColorDownloadApp;
+  position: relative;
+  height: 200px;
+
+  @include tablet('height', 280px);
+  @include tablet('margin-top', 35px);
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @include tablet('padding', 0);
+  }
+
+  &__left {
+    @include col();
+    @include size-desktop(5);
+    @include size-tablet(3);
+
+    @include tablet-block() {
+      img {
+        position: absolute;
+        top: -80px;
+        left: 3%;
+      }
+    }
+
+    @include desktop-block() {
+      img {
+        left: 15%;
+      }
+    }
+
+    position: relative;
+  }
+
+  &__right {
+    @include col();
+    @include size-desktop(7);
+    @include size-tablet(5);
+    @include size-mobile(1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h3 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0.05em;
+      color: $colorBottomMenuTitle;
+    }
+
+    p {
+      margin: 12px 0 35px 0;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $colorBottomMenuTitle;
+    }
+
+    &-btn-group {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      img {
+        &:first-child {
+          margin-right: 18px;
+        }
+      }
+    }
+  }
+}

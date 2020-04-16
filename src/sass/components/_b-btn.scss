@@ -1,0 +1,57 @@
+.btn {
+  background-color: transparent;
+  color: transparent;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  border-radius: 28px;
+  border: 1px solid transparent;
+
+  &--primary {
+    background-color: $bgColorBlue;
+    color: $colorWhite;
+    border-color: $bgColorBlue;
+  }
+
+  &--cart {
+    background-color: $bgColorGreen;
+    color: $colorWhite;
+    border-color: $bgColorGreen;
+    border-radius: 28px;
+    width: 112px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @include desktop-block() {
+      width: 112px;
+      height: 40px;
+    }
+
+    @include tablet-block() {
+      width: 61px;
+      height: 40px;
+
+      .cart {
+        width: 20px;
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: $bgColorWhite;
+    width: 152px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid $bgColorBlue;
+    color: $colorBlue;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+  }
+}

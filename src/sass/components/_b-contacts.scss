@@ -1,0 +1,253 @@
+.contacts {
+  font-size: 14px;
+  line-height: 16px;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    @include desktop-block() {
+      margin-bottom: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--main {
+      @include row-flex();
+      flex-direction: row;
+
+      .contacts {
+        &__section {
+          &-content {
+            @include col();
+            @include size-desktop(5);
+            @include size-tablet(4);
+            @include size-mobile(1);
+          }
+          &-map {
+            display: none;
+            @include col();
+            @include size-desktop(7);
+            @include size-tablet(4);
+            @include size-mobile(1);
+
+            @include tablet-block() {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 25px;
+      margin: 0 0 16px;
+
+      @include tablet-block() {
+        margin-bottom: 24px;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      line-height: 21px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      margin-top: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__box {
+    margin-bottom: 32px;
+
+    &-wrapper {
+      margin-bottom: -32px;
+
+      &--row {
+        @include row-flex();
+
+        .contacts{
+          &__box {
+            @include col();
+            @include size-desktop(4);
+            @include size-tablet(4);
+            @include size-mobile(1);
+          }
+        }
+      }
+    }
+
+    &--support {
+      @include tablet-block() {
+        display: flex;
+
+        .contacts {
+          &__title {
+            flex: 0 0 180px;
+            margin-right: 90px;
+          }
+        }
+      }
+    }
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 12px;
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    padding: 1px 0 1px 32px;
+    position: relative;
+
+    &--address {
+      &:before {
+        background-image: url('../images/contacts__pin.svg');
+      }
+    }
+
+    &--phone {
+      &:before {
+        background-image: url('../images/contacts__phone.svg');
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    &--email {
+      &:before {
+        background-image: url('../images/contacts__email.svg');
+      }
+
+      a {
+        color: $bgColorBlue;
+        text-decoration: none;
+      }
+    }
+
+    &--worktime {
+      &:before {
+        background-image: url('../images/contacts__time.svg');
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__worktime {
+    display: flex;
+    justify-content: space-between;
+    max-width: 150px;
+  }
+
+  &__documents {
+    @include row-flex();
+    margin-bottom: 8px;
+
+    &-item {
+      @include col();
+      @include size-desktop(3);
+      @include size-tablet(2.66);
+      @include size-mobile(1);
+      display: flex;
+      margin-bottom: 16px;
+    }
+
+    &-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 32px;
+      color: $bgColorBlue;
+      text-decoration: none;
+      padding-left: 44px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        background: url('../images/document.svg') no-repeat center center;
+      }
+    }
+  }
+
+  &__info {
+    @include row-flex();
+
+    &-item {
+      @include col();
+      @include size-desktop(4);
+      @include size-tablet(8);
+      @include size-mobile(1);
+      box-sizing: border-box;
+      margin-bottom: 24px;
+
+      @include tablet-block() {
+        margin-bottom: 16px;
+      }
+
+      @include desktop-block() {
+        margin-bottom: 0;
+      }
+
+      &--collaborate {
+        @include size-desktop(4);
+      }
+
+      &--opportunities {
+        @include size-desktop(5);
+      }
+
+      &--connect {
+        @include size-desktop(3);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__map {
+    height: 100%;
+  }
+}

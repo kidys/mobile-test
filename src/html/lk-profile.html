@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Личный кабинет - Мои данные</title>
+</head>
+<body>
+@@include('./partials/debug.html')
+
+@@include('./partials/header.html')
+@@include('./partials/nav.html')
+@@include('./partials/lk/lk-breadcrumbs.html')
+
+<section class="page">
+    <div class="wrapper">
+        <div class="container">
+            <div class="page__sidebar">
+                <div class="lk-menu">
+                    <ul class="lk-menu__list">
+                        <li class="lk-menu__item lk-menu__item--active">
+                            <a href="lk-profile.html" class="lk-menu__link">Мои данные</a>
+                        </li>
+                        <li class="lk-menu__item">
+                            <a href="lk-profile-address.html" class="lk-menu__link">Мои адреса</a>
+                        </li>
+                        <li class="lk-menu__item">
+                            <a href="lk-profile-orders.html" class="lk-menu__link">Мои заказы</a>
+                        </li>
+                        <li class="lk-menu__item">
+                            <a href="lk-profile-offers.html" class="lk-menu__link">Мои акции</a>
+                        </li>
+                        <li class="lk-menu__item">
+                            <a href="lk-profile-promocodes.html" class="lk-menu__link">Мои промокоды</a>
+                        </li>
+                        <li class="lk-menu__item">
+                            <a href="lk-profile-messages.html" class="lk-menu__link">Сообщения</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page__content">
+                <div class="lk">
+                    <form class="lk__form lk__form--profile">
+                        <div class="lk__section">
+                            <div class="lk__row lk__row--subtitle">
+                                <div class="lk__block">
+                                    <h3>Основные данные</h3>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <div class="select-component select-component--wide">
+                                        <div class="select-component__title">Тип плательщика</div>
+                                        <select>
+                                            <option value="0" disabled selected>Выбрать плательщика</option>
+                                            <option value="1">Физическое лицо</option>
+                                            <option value="2">Юридическое лицо</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Имя</span>
+                                        <input type="text" placeholder="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk__section">
+                            <div class="lk__row lk__row--subtitle">
+                                <div class="lk__block">
+                                    <h3>Личные данные</h3>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Имя</span>
+                                        <input type="text" placeholder="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Фамилия</span>
+                                        <input type="text" placeholder="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Email</span>
+                                        <input type="email" placeholder="youremail@hostname.ru">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Номер телефона</span>
+                                        <input type="text" placeholder="+7 (___) ___ ____">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="checkbox-container checkbox-container--start">
+                                        <input type="checkbox">
+                                        <span class="checkbox__checkmark"></span>
+                                        <span class="checkbox__title">Подписка на рассылку сообщений о статусе заказа</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="checkbox-container checkbox-container--start">
+                                        <input type="checkbox">
+                                        <span class="checkbox__checkmark"></span>
+                                        <span class="checkbox__title">Подписка на рассылку информационно-рекламных сообщений</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk__section">
+                            <div class="lk__row lk__row--subtitle">
+                                <div class="lk__block">
+                                    <h3>Безопасность</h3>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Пароль</span>
+                                        <input type="password" placeholder="">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <label class="form-input form-input--label form-input--wide">
+                                        <span class="form-input__title">Подтвердите пароль</span>
+                                        <input type="password" placeholder="">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk__section">
+                            <div class="lk__row">
+                                <div class="lk__field">
+                                    <div class="lk__button">
+                                        <button type="submit" class="button button--green">Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./partials/bottom-menu.html')
+@@include('./partials/footer.html')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

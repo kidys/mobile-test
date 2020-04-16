@@ -1,0 +1,64 @@
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+
+$maxWidth: 1137px;
+
+$fieldsDesktop: auto;
+$fieldsTablet: 24px;
+$fieldsMobile: auto;
+
+$offsetMobile: 0px;
+$offsetTablet: 24px; //6
+$offsetDesktop: 16px; // 8
+
+$columnsMobile: 1;
+$columnsTablet: 8;
+$columnsDesktop: 12;
+
+$offsetMobileOneSide: ($offsetMobile / 2);
+$offsetTabletOneSide: ($offsetTablet / 2);
+$offsetDesktopOneSide: ($offsetDesktop / 2);
+
+$breakDesktop: $maxWidth + 30px;
+$breakTablet: 768px;
+$breakMobile: 360px;
+
+$bgColorWhite: #ffffff;
+$bgColorGreen: #5BC815;
+$bgColorBlue: #28009F;
+$bgColorFooter: #494949;
+$bgColorDownloadApp: #F2F9FF;
+$bgColorNavigationMobile: #1C0A53;
+$bgColorTopNavLinkHover: #6DDF24;
+$bgColorBreadcrumbs: #FCFCFC;
+$bgColorBurgerInverse: #3F3D56;
+$bgColorShoppingCartCost: #FEFEFE;
+$bgColorShoppingCartSwap: #F8F8F8;
+$bgColorButtonDefault: #E8E8E8;
+$bgColorCards: #FDFDFD;
+$bgColorBlocks: #FEFEFE;
+$bgColorStatusProcessed: rgba(#28009F, .3);
+$bgColorStatusPending: rgba(#0D4494, .3);
+$bgColorStatusCompleted: rgba(#5BC815, .2);
+$bgColorStatusAccepted: rgba(#F2994A, .3);
+
+$colorWhite: $bgColorWhite;
+$colorGreen: $bgColorGreen;
+$colorBlue: $bgColorBlue;
+$colorBottomMenuTitle: #3F3D56;
+$colorBottomMenuLink: #0D4494;
+$colorReviewsCity: #BEBDC8;
+$colorProductPrice: #5093C9;
+$colorBlack: #000000;
+$colorRed: #FF2323;
+$colorCatalogMenu: #381A18;
+$colorLines: #ECECEC;
+$colorMain: #3F3D56;
+$colorProductHeading: #0D4494;
+$colorPrice: #0D4494;
+$colorOldPrice: #BEBDC8;
+$colorShoppingCartCostCaption: #C4C4C4;
+$colorButtonDefault: #9C9C9C;
+$colorStatusProcessed: #28009F;
+$colorStatusPending: #0D4494;
+$colorStatusCompleted: #5BC815;
+$colorStatusAccepted: #F2994A;

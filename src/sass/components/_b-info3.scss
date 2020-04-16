@@ -1,0 +1,100 @@
+.info3 {
+  padding: 16px 0 60px 0;
+
+  @include desktop('padding-top', 112px);
+  @include tablet('padding-top', 100px);
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    padding: 0 15px;
+
+    @include tablet('padding', 0);
+  }
+
+  &__left {
+    @include col();
+    @include size-desktop(7);
+    @include size-tablet(5);
+    @include size-mobile(2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 107px;
+      height: auto;
+      margin: 0 8px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include tablet('width', 130px);
+    }
+  }
+
+  &__right {
+    @include col();
+    @include size-desktop(5);
+    @include size-tablet(3);
+    @include size-mobile(2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    &-title {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: 0.05em;
+      color: $colorBottomMenuTitle;
+      margin: 0;
+
+      @include tablet-block() {
+
+      }
+    }
+
+    &-btn {
+      margin-top: 22px;
+
+      @include desktop('margin-top', 32px);
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 180px;
+        height: 40px;
+
+        @include tablet('width', 180px);
+
+        background-color: $bgColorGreen;
+
+        span {
+          color: $colorWhite;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 18px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

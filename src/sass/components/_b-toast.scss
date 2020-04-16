@@ -1,0 +1,42 @@
+.jq-icon {
+  &-success {
+    color: $colorWhite;
+    background-color: $bgColorGreen;
+    border-color: $bgColorGreen;
+
+    .jq-toast-loader.jq-toast-loaded {
+      background-color: darken($bgColorGreen, 5%) !important;
+    }
+  }
+
+  &-error {
+    color: $colorWhite;
+    background-color: $colorRed;
+    border-color: $colorRed;
+
+    .jq-toast-loader.jq-toast-loaded {
+      background-color: darken($colorRed, 10%) !important;
+    }
+  }
+}
+
+.jq-toast {
+  &-wrap {
+    width: 70%;
+
+    @include tablet-block() {
+      width: 45%;
+      max-width: 350px;
+    }
+  }
+
+  &-single, &-heading {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-heading {
+    max-width: 95%;
+  }
+}

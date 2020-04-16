@@ -1,0 +1,85 @@
+.testimonials {
+  &__item {
+    margin-bottom: 32px;
+
+    @include tablet('margin-bottom', 24px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+
+    span {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: normal;
+      color: $colorButtonDefault;
+      margin-left: 16px;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+    color: $colorButtonDefault;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__answer {
+    margin-top: 10px;
+
+    &-title {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      padding: 12px 16px;
+      font-size: 14px;
+      line-height: 16px;
+      background: #F8F8F8;
+      border-radius: 8px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

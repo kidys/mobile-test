@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Блог &quot;Сестрица&quot;</title>
+</head>
+<body>
+@@include('./partials/debug.html')
+
+@@include('./partials/header.html')
+@@include('./partials/nav.html')
+@@include('./partials/blog/blog-breadcrumbs.html')
+
+<section class="page page--no-sidebar">
+    <div class="wrapper">
+        <div class="container">
+            <div class="page__content">
+                <div class="page__heading">
+                    <h1>Блог компании</h1>
+                    @@include('./partials/blog/blog-sort.html')
+                </div>
+                @@include('./partials/blog/blog-items.html')
+                @@include('./partials/pagination.html')
+                @@include('./partials/stocks-block.html')
+            </div>
+        </div>
+    </div>
+</section>
+
+@@include('./partials/bottom-menu.html')
+@@include('./partials/footer.html')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

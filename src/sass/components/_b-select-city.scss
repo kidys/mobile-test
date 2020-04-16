@@ -1,0 +1,130 @@
+.select-city {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  background: #3F3D56;
+
+  @include tablet-block() {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    left: auto;
+    bottom: auto;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.14);
+    border-radius: 8px;
+    @include tablet-shift-right(4);
+  }
+
+  @include desktop-block() {
+    @include desktop-shift-right(4);
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    overflow-y: auto;
+
+    @include tablet-block() {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      max-height: none;
+      min-width: 300px;
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding: 24px;
+
+    @include tablet-block() {
+      padding: 16px 16px 0;
+    }
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 16px;
+    color: #fff;
+    padding: 4px 48px 4px 0;
+    margin-bottom: 100px;
+
+    @include tablet-block() {
+      margin-bottom: 16px;
+      color: $colorMain;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 48px 0 0;
+
+    @include tablet-block() {
+      margin-top: 16px;
+    }
+
+    li {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      color: #fff;
+      margin-bottom: 40px;
+
+      @include tablet-block() {
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: $colorMain;
+        padding: 16px;
+        margin: 0 -16px;
+
+        &:hover {
+          cursor: pointer;
+          background: $bgColorCards;
+        }
+
+        &:last-child {
+          box-shadow: none;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background: url('../images/close-icon-white.svg') no-repeat center center;
+
+    @include tablet-block() {
+      top: 16px;
+      right: 16px;
+      background-image: url('../images/close-icon-color.svg');
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+}

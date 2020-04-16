@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оформление заказа &quot;Сестрица&quot;</title>
+</head>
+<body>
+<div class="debug" style="display: none">
+    <div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="header-wrapper">
+        <div class="header__content">
+            <div class="header__logo">
+                <img src="images/b-header__logo.svg" alt="logo image" class="header__logo-image mobile mobile--hidden lazy">
+                <img src="images/b-header__logo--mobile.svg" alt="logo image mobile" class="header__logo-image mobile mobile--visible lazy">
+                <span class="header__logo-image-title">Вода из<br/>Марий Эл</span>
+            </div>
+            <div class="header__location mobile mobile--hidden">
+                <div class="header__location-city" data-action="select-city">
+                    <img src="images/b-header__icon-map.svg" alt="icon map" class="header__location-city-image lazy">
+                    <span class="header__location-city-title">
+                        <span>Йошкар-Ола</span>
+                    </span>
+                </div>
+                <div class="header__location-link">
+                    <a href="#" class="link">Пункты продаж</a>
+                </div>
+            </div>
+            <div class="header__phone mobile mobile--hidden">
+                <div class="header__phone-group">
+                    <img src="images/b-header__icon-phone.svg" alt="icon phone" class="header__phone-image lazy">
+                    <span class="header__phone-number">(8362) 45-00-77</span>
+                </div>
+                <div class="header__phone-link">
+                    <a href="#" class="link">Условия доставки</a>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div class="header__actions-button-water-order mobile mobile--hidden">
+                    <a href="#" class="button button--blue header__btn">Заказать воду</a>
+                </div>
+                <div class="header__actions-buttons-group mobile mobile--visible">
+                    <ul class="header__actions-buttons-group-list">
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="javascript:void(0)" class="header__actions-buttons-group-list-link" data-name="user account">
+                                <img src="images/b-header__icon-user-account.svg" alt="icon user account" class="lazy">
+                            </a>
+                        </li>
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="javascript:void(0)" class="header__actions-buttons-group-list-link" data-name="user account" data-status="is-authorized">
+                                <img src="images/b-header__icon-user-account.svg" alt="icon user account" class="lazy">
+                            </a>
+                        </li>
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="#" class="header__actions-buttons-group-list-link">
+                                <img src="images/b-header__icon-cart.svg" alt="icon cart" class="lazy">
+                                <span class="header__actions-buttons-group-list-link-label">99</span>
+                            </a>
+                        </li>
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="#" class="header__actions-buttons-group-list-link" data-name="menu">
+                                <!--<img src="images/b-header__icon-menu-open--mobile.svg" alt="icon menu" class="lazy">-->
+                                <div class="burger">
+                                    <div class="burger-content">
+                                        <div class="burger__line burger__line--top">&nbsp;</div>
+                                        <div class="burger__line burger__line--bottom">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="select-city">
+    <div class="select-city__wrapper">
+        <div class="select-city__content">
+            <div class="select-city__note">Выберите свой город</div>
+            <div class="select-city__close"></div>
+            <ul class="select-city__list">
+                <li>Йошкар-Ола</li>
+                <li>Казань</li>
+                <li>Чебоксары</li>
+                <li>Новочебоксарск</li>
+                <li>Нижний Новгород</li>
+                <li>Уфа</li>
+            </ul>
+        </div>
+    </div>
+</div>
+            <div class="selected-city selected-city--active">
+    <div class="selected-city__wrapper">
+        <div class="selected-city__content">
+            <div class="selected-city__note">Мы угадали ваш город?</div>
+            <div class="selected-city__value">Йошкар-Ола</div>
+            <div class="selected-city__buttons">
+                <button class="button button--green" data-action="close-selected-city">Да</button>
+                <button class="button button--green button--outlined" data-action="select-city">Нет, изменить</button>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        <div class="lk-authentication">
+    <div class="lk-authentication__wrapper">
+        <div class="lk-authentication__content">
+            <div class="lk-authentication__close"></div>
+            <form>
+                <div class="lk-authentication__row">
+                    <div class="lk-authentication__field">
+                        <label class="form-input form-input--label form-input--wide">
+                            <span class="form-input__title lk-authentication__field-label">Имя</span>
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                </div>
+                <div class="lk-authentication__row">
+                    <div class="lk-authentication__field">
+                        <label class="form-input form-input--label form-input--wide">
+                            <span class="form-input__title lk-authentication__field-label">Пароль</span>
+                            <input type="password" placeholder="">
+                        </label>
+                        <div class="lk-authentication__field-note">
+                            <a href="#" class="link">Забыли пароль?</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-authentication__row">
+                    <div class="lk-authentication__field">
+                        <a href="#" class="button button--green lk-authentication__button">Войти</a>
+                    </div>
+                </div>
+                <div class="lk-authentication__row">
+                    <div class="lk-authentication__field">
+                        <div class="lk-authentication__field-info">Нет личного кабинета?</div>
+                        <a href="#" class="button button--outlined button--green lk-authentication__button">Регистрация</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+        <div class="lk-logout">
+    <div class="lk-logout__wrapper">
+        <div class="lk-logout__content">
+            <div class="lk-logout__close" data-status="is-authorized"></div>
+            <ul class="lk-logout__list">
+                <li class="lk-logout__item">
+                    <a href="lk-profile.html" class="lk-logout__link">Профиль</a>
+                </li>
+                <li class="lk-logout__item">
+                    <a href="#" class="lk-logout__link">Выйти</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+</header>
+<nav class="top-navigation animated">
+    <div class="top-navigation-wrapper">
+        <div class="top-navigation__mobile-top mobile mobile--visible">
+            <div class="top-navigation__city-select">
+                <div class="top-navigation__city-select-title">Ваш город:</div>
+                <div class="top-navigation__city-select-name">
+                    <span>Йошкар-Ола</span>
+                    <img src="images/b-top-navigation__icon-arrow-right.svg" alt="icon arrow right">
+                </div>
+            </div>
+            <div class="top-navigation__search-form">
+                <div class="form-input form-input--with-icon">
+                    <img src="images/search-icon.svg" alt="icon search">
+                    <input type="text" placeholder="Поиск">
+                </div>
+            </div>
+        </div>
+        <div class="top-navigation__menu-list">
+            <ul class="top-navigation__content">
+                <li><a class="top-navigation__link top-navigation__link--active" href="#">Магазин</a></li>
+                <li class="top-navigation__item top-navigation__item--important"><a class="top-navigation__link" href="#">Акции</a></li>
+                <li><a class="top-navigation__link" href="#">Санобработка</a></li>
+                <li><a class="top-navigation__link" href="#">Отзывы</a></li>
+                <li><a class="top-navigation__link" href="#">Преимущества</a></li>
+                <li><a class="top-navigation__link" href="#">О компании</a></li>
+                <li><a class="top-navigation__link" href="#">Блог</a></li>
+            </ul>
+            <ul class="header__actions-buttons-group-list desktop desktop--visible tablet tablet--visible">
+                <li class="header__actions-buttons-group-list-item">
+                    <a href="#" class="header__actions-buttons-group-list-link top-navigation__link" data-name="user account">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3004 7.94685C13.3004 10.8344 10.9596 13.1752 8.0721 13.1752C5.18456 13.1752 2.84375 10.8344 2.84375 7.94685C2.84375 5.05932 5.18456 2.71851 8.0721 2.71851C10.9596 2.71851 13.3004 5.05932 13.3004 7.94685ZM13.8415 12.3021C14.7573 11.0909 15.3004 9.58231 15.3004 7.94685C15.3004 3.95475 12.0642 0.718506 8.0721 0.718506C4.07999 0.718506 0.84375 3.95475 0.84375 7.94685C0.84375 11.939 4.07999 15.1752 8.0721 15.1752C9.70754 15.1752 11.2161 14.6321 12.4273 13.7163L16.1996 17.4886C16.5901 17.8791 17.2233 17.8791 17.6138 17.4886C18.0043 17.0981 18.0043 16.4649 17.6138 16.0744L13.8415 12.3021Z" fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__actions-buttons-group-list-item">
+                    <a href="javascript:void(0)" class="header__actions-buttons-group-list-link top-navigation__link" data-name="user account">
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.2912 14.5452C15.8883 13.591 15.3037 12.7242 14.5698 11.9931C13.8382 11.2599 12.9715 10.6754 12.0177 10.2717C12.0091 10.2675 12.0006 10.2653 11.9921 10.2611C13.3226 9.30002 14.1875 7.73456 14.1875 5.96836C14.1875 3.04248 11.8169 0.671875 8.89104 0.671875C5.96517 0.671875 3.59456 3.04248 3.59456 5.96836C3.59456 7.73456 4.45951 9.30002 5.79004 10.2632C5.7815 10.2675 5.77295 10.2696 5.76441 10.2739C4.80763 10.6775 3.94908 11.2563 3.21228 11.9952C2.47912 12.7269 1.89457 13.5935 1.49092 14.5474C1.09437 15.4812 0.880503 16.4824 0.860893 17.4967C0.860323 17.5195 0.864321 17.5422 0.872652 17.5634C0.880983 17.5847 0.893477 17.604 0.9094 17.6203C0.925322 17.6367 0.94435 17.6496 0.965362 17.6585C0.986375 17.6673 1.00895 17.6719 1.03175 17.6719H2.31315C2.40712 17.6719 2.48187 17.5971 2.48401 17.5053C2.52672 15.8565 3.18878 14.3125 4.35913 13.1421C5.57006 11.9312 7.17823 11.2648 8.89104 11.2648C10.6039 11.2648 12.212 11.9312 13.423 13.1421C14.5933 14.3125 15.2554 15.8565 15.2981 17.5053C15.3002 17.5993 15.375 17.6719 15.4689 17.6719H16.7503C16.7731 17.6719 16.7957 17.6673 16.8167 17.6585C16.8377 17.6496 16.8568 17.6367 16.8727 17.6203C16.8886 17.604 16.9011 17.5847 16.9094 17.5634C16.9178 17.5422 16.9218 17.5195 16.9212 17.4967C16.8998 16.4759 16.6884 15.4828 16.2912 14.5452ZM8.89104 9.64172C7.91077 9.64172 6.98815 9.25944 6.29406 8.56534C5.59996 7.87125 5.21768 6.94863 5.21768 5.96836C5.21768 4.98808 5.59996 4.06547 6.29406 3.37137C6.98815 2.67728 7.91077 2.29499 8.89104 2.29499C9.87132 2.29499 10.7939 2.67728 11.488 3.37137C12.1821 4.06547 12.5644 4.98808 12.5644 5.96836C12.5644 6.94863 12.1821 7.87125 11.488 8.56534C10.7939 9.25944 9.87132 9.64172 8.89104 9.64172Z" fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__actions-buttons-group-list-item">
+                    <a href="javascript:void(0)" class="header__actions-buttons-group-list-link top-navigation__link" data-name="user account" data-status="is-authorized">
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.2912 14.5452C15.8883 13.591 15.3037 12.7242 14.5698 11.9931C13.8382 11.2599 12.9715 10.6754 12.0177 10.2717C12.0091 10.2675 12.0006 10.2653 11.9921 10.2611C13.3226 9.30002 14.1875 7.73456 14.1875 5.96836C14.1875 3.04248 11.8169 0.671875 8.89104 0.671875C5.96517 0.671875 3.59456 3.04248 3.59456 5.96836C3.59456 7.73456 4.45951 9.30002 5.79004 10.2632C5.7815 10.2675 5.77295 10.2696 5.76441 10.2739C4.80763 10.6775 3.94908 11.2563 3.21228 11.9952C2.47912 12.7269 1.89457 13.5935 1.49092 14.5474C1.09437 15.4812 0.880503 16.4824 0.860893 17.4967C0.860323 17.5195 0.864321 17.5422 0.872652 17.5634C0.880983 17.5847 0.893477 17.604 0.9094 17.6203C0.925322 17.6367 0.94435 17.6496 0.965362 17.6585C0.986375 17.6673 1.00895 17.6719 1.03175 17.6719H2.31315C2.40712 17.6719 2.48187 17.5971 2.48401 17.5053C2.52672 15.8565 3.18878 14.3125 4.35913 13.1421C5.57006 11.9312 7.17823 11.2648 8.89104 11.2648C10.6039 11.2648 12.212 11.9312 13.423 13.1421C14.5933 14.3125 15.2554 15.8565 15.2981 17.5053C15.3002 17.5993 15.375 17.6719 15.4689 17.6719H16.7503C16.7731 17.6719 16.7957 17.6673 16.8167 17.6585C16.8377 17.6496 16.8568 17.6367 16.8727 17.6203C16.8886 17.604 16.9011 17.5847 16.9094 17.5634C16.9178 17.5422 16.9218 17.5195 16.9212 17.4967C16.8998 16.4759 16.6884 15.4828 16.2912 14.5452ZM8.89104 9.64172C7.91077 9.64172 6.98815 9.25944 6.29406 8.56534C5.59996 7.87125 5.21768 6.94863 5.21768 5.96836C5.21768 4.98808 5.59996 4.06547 6.29406 3.37137C6.98815 2.67728 7.91077 2.29499 8.89104 2.29499C9.87132 2.29499 10.7939 2.67728 11.488 3.37137C12.1821 4.06547 12.5644 4.98808 12.5644 5.96836C12.5644 6.94863 12.1821 7.87125 11.488 8.56534C10.7939 9.25944 9.87132 9.64172 8.89104 9.64172Z" fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="header__actions-buttons-group-list-item">
+                    <a href="#" class="header__actions-buttons-group-list-link top-navigation__link">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.1221 17C7.55753 17 7.01608 16.7761 6.61687 16.3776C6.21765 15.9791 5.99338 15.4386 5.99338 14.875C5.99338 14.3114 6.21765 13.7709 6.61687 13.3724C7.01608 12.9739 7.55753 12.75 8.1221 12.75C8.68667 12.75 9.22812 12.9739 9.62733 13.3724C10.0265 13.7709 10.2508 14.3114 10.2508 14.875C10.2508 15.4386 10.0265 15.9791 9.62733 16.3776C9.22812 16.7761 8.68667 17 8.1221 17ZM15.5726 17C15.008 17 14.4666 16.7761 14.0674 16.3776C13.6682 15.9791 13.4439 15.4386 13.4439 14.875C13.4439 14.3114 13.6682 13.7709 14.0674 13.3724C14.4666 12.9739 15.008 12.75 15.5726 12.75C16.1372 12.75 16.6786 12.9739 17.0778 13.3724C17.4771 13.7709 17.7013 14.3114 17.7013 14.875C17.7013 15.4386 17.4771 15.9791 17.0778 16.3776C16.6786 16.7761 16.1372 17 15.5726 17ZM1.6955 2.04319C1.42979 2.03463 1.17783 1.92325 0.99291 1.7326C0.807985 1.54195 0.70459 1.28697 0.70459 1.02159C0.70459 0.756215 0.807985 0.501239 0.99291 0.310587C1.17783 0.119935 1.42979 0.00855505 1.6955 0H2.92057C3.88063 0 4.71083 0.665125 4.91944 1.60013L6.25308 7.59475C6.4617 8.52975 7.2919 9.19488 8.25195 9.19488H16.2474L17.7822 3.06425H7.83578C7.57258 3.05226 7.32414 2.93945 7.14212 2.74927C6.96011 2.5591 6.85854 2.30621 6.85854 2.04319C6.85854 1.78017 6.96011 1.52727 7.14212 1.3371C7.32414 1.14693 7.57258 1.03411 7.83578 1.02212H17.7822C18.0934 1.02203 18.4004 1.09276 18.6801 1.22892C18.9598 1.36509 19.2046 1.56311 19.3961 1.80793C19.5876 2.05276 19.7206 2.33794 19.7851 2.6418C19.8496 2.94566 19.8439 3.26019 19.7683 3.5615L18.2335 9.69C18.1229 10.1322 17.8673 10.5248 17.5074 10.8053C17.1475 11.0858 16.704 11.2381 16.2474 11.2381H8.25195C7.32042 11.2382 6.4167 10.9211 5.69005 10.3393C4.9634 9.75745 4.45728 8.94559 4.25528 8.03781L2.92057 2.04319H1.6955Z" fill="white"/>
+                        </svg>
+                        <span class="header__actions-buttons-group-list-link-label">99</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="breadcrumbs">
+    <div class="wrapper">
+        <div class="container">
+            <div class="breadcrumbs__content">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="./" class="breadcrumbs__link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="./shopping-cart.html" class="breadcrumbs__link">Корзина</a>
+                    </li>
+                    <li class="breadcrumbs__item">Оформление заказа</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page page--no-sidebar">
+    <div class="wrapper">
+        <div class="container">
+            <div class="page__content">
+                <div class="shopping-cart">
+                    <div class="shopping-cart__content">
+                        <div class="shopping-cart__login">
+                            <div class="shopping-cart__login-text">Если вы уже зарегистрированы на сайте, пожалуйста, введите свой email и пароль.</div>
+                            <div class="shopping-cart__login-button">
+                                <div class="shopping-cart__login-button_mobile">></div>
+                                <div class="shopping-cart__login-button_large"><a href="#" class="button button--green">Войти</a></div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__order">
+                            <div class="shopping-cart__order-tabs">
+                                <div class="shopping-cart__order-tab shopping-cart__order-tab--active"><span>1</span>&nbsp;Данные покупателя</div>
+                                <div class="shopping-cart__order-tab"><span>2</span>&nbsp;Время доставки</div>
+                                <div class="shopping-cart__order-tab"><span>3</span>&nbsp;Форма оплаты</div>
+                            </div>
+                            <div class="shopping-cart__order-step shopping-cart__order-step--01 shopping-cart__order-step--active">
+                                <div class="shopping-cart__order-item">
+                                    <div class="shopping-cart__order-title">Данные покупателя</div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <span class="form-input__title shopping-cart__order-field-label">Выберите тип пользователя</span>
+                                            <div class="radiobutton-group radiobutton-group--line">
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="customer">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Физическое лицо</span>
+                                                </label>
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="customer">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Юридическое лицо</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Имя</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Фамилия</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Email</span>
+                                                <input type="email" placeholder="youremail@hostname.ru">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field shopping-cart__order-field--note">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Номер телефона</span>
+                                                <input type="text" placeholder="+7 (___) ___ ____">
+                                            </label>
+                                            <div class="shopping-cart__order-note">
+                                                На указанный вами номер будет выслано СМС-уведомление, подтверждающее прием заказа
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field shopping-cart__order-field--note">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Комментарий</span>
+                                                <textarea></textarea>
+                                            </label>
+                                            <div class="shopping-cart__order-note">
+                                                Если вы участвуете в одной из наших акций, пожалуйста, укажите название акции в комментарии к заказу. Наш менеджер свяжется с вами для уточнения деталей.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row shopping-cart__order-row--buttons">
+                                        <button class="button button--outlined button--green shopping-cart__order-button shopping-cart__order-button--prev">Назад</button>
+                                        <button class="button button--green shopping-cart__order-button shopping-cart__order-button--next" data-step="shopping-cart__order-step--02">Вперёд</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-cart__order-step shopping-cart__order-step--02">
+                                <div class="shopping-cart__order-item">
+                                    <div class="shopping-cart__order-title">Дата и время доставки</div>
+                                    <div class="shopping-cart__order-row">
+                                        <h3 class="shopping-cart__order-subtitle">Время доставки</h3>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">День</span>
+                                                <input type="date" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Время</span>
+                                                <input type="time" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <h3 class="shopping-cart__order-subtitle">Адрес доставки</h3>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <div class="select-component select-component--wide">
+                                                <div class="select-component__title shopping-cart__order-field-label">Город</div>
+                                                <select>
+                                                    <option value="0" disabled selected>Выбрать город</option>
+                                                    <option value="1">select 01</option>
+                                                    <option value="2">select 02</option>
+                                                    <option value="3">select 03</option>
+                                                    <option value="4">select 04</option>
+                                                    <option value="5">select 05</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Улица</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Номер дома</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Корпус</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Квартира</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                        <div class="shopping-cart__order-field">
+                                            <label class="form-input form-input--label form-input--wide">
+                                                <span class="form-input__title shopping-cart__order-field-label">Этаж</span>
+                                                <input type="text" placeholder="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field">
+                                            <label class="checkbox-container checkbox-container--start">
+                                                <input type="checkbox">
+                                                <span class="checkbox__checkmark"></span>
+                                                <span class="checkbox__title">Есть работающий лифт</span>
+                                            </label>
+                                            <div class="shopping-cart__order-note">
+                                                Подъем на шестой и последующие этажи при отсутствии или неисправности лифта оплачивается дополнительно из расчета 30 (тридцать) руб./этаж за каждую бутыль.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row shopping-cart__order-row--buttons">
+                                        <button class="button button--outlined button--green shopping-cart__order-button shopping-cart__order-button--prev" data-step="shopping-cart__order-step--01">Назад</button>
+                                        <button class="button button--green shopping-cart__order-button shopping-cart__order-button--next" data-step="shopping-cart__order-step--03">Вперёд</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-cart__order-step shopping-cart__order-step--03">
+                                <div class="shopping-cart__order-item">
+                                    <div class="shopping-cart__order-title">Способ оплаты</div>
+                                    <div class="shopping-cart__order-row">
+                                        <h3 class="shopping-cart__order-subtitle">Форма оплаты</h3>
+                                    </div>
+                                    <div class="shopping-cart__order-row">
+                                        <div class="shopping-cart__order-field shopping-cart__order-field--note-wide">
+                                            <div class="radiobutton-group">
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="payment">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Карта на сайте</span>
+                                                </label>
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="payment">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Наличные курьеру</span>
+                                                </label>
+                                                <label class="checkbox-container checkbox-container--start">
+                                                    <input type="radio" name="payment">
+                                                    <span class="checkbox__checkmark"></span>
+                                                    <span class="checkbox__title">Квитанция сбербанк</span>
+                                                </label>
+                                            </div>
+                                            <div class="shopping-cart__order-note">
+                                                Вы можете оплатить заказ прямо сейчас через платежную систему PayAnyWay. К оплате принимаются банковские карты: Visa, MasterCard, электронные деньги: Webmoney. Яндекс деньги. Услуга бесплатная, никакой процент с Вас не снимается.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shopping-cart__order-row shopping-cart__order-row--buttons">
+                                        <button class="button button--outlined button--green shopping-cart__order-button shopping-cart__order-button--prev" data-step="shopping-cart__order-step--02">Назад</button>
+                                        <button class="button button--green shopping-cart__order-button shopping-cart__order-button--next" data-step="shopping-cart__cost--order">Перейти к оплате</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping-cart__cost shopping-cart__cost--order">
+                        <div class="shopping-cart__cost-row">
+                            <div class="shopping-cart__cost-discount">
+                                <form class="shopping-cart__cost-discount-controls">
+                                    <label class="form-input">
+                                        <input type="text" placeholder="код скидки">
+                                    </label>
+                                    <button class="button button--default">применить</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <div class="shopping-cart__cost-value">
+                                Стоимость товара
+                                <div class="shopping-cart__cost-price">240&nbsp;₽</div>
+                            </div>
+                            <div class="shopping-cart__cost-value">
+                                Стоимость тары
+                                <div class="shopping-cart__cost-price">
+                                    <span class="shopping-cart__cost-caption">2 бутыли</span>
+                                    600&nbsp;₽
+                                </div>
+                            </div>
+                            <div class="shopping-cart__cost-value">
+                                Скидка
+                                <div class="shopping-cart__cost-price">10&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <div class="shopping-cart__cost-total">
+                                <div>Итого</div>
+                                <div>830&nbsp;₽</div>
+                            </div>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <a href="#" class="button button--green button--uppercase">Оформить заказ</a>
+                        </div>
+                        <div class="shopping-cart__cost-row">
+                            <button class="button button--outlined button--green button--uppercase" js-popup-switcher="popup-fast-buy">Купить без регистрации</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bottom-menu">
+    <div class="bottom-menu-wrapper">
+        <div class="bottom-menu__content">
+            <div class="bottom-menu__item">
+                <div class="bottom-menu__item-title">
+                    <h3>О воде</h3>
+                </div>
+                <div class="bottom-menu__item-content">
+                    <ul class="bottom-menu__item-content-menu">
+                        <li><a href="#" class="link">Новичкам</a></li>
+                        <li><a href="#" class="link">Как заказать</a></li>
+                        <li><a href="#" class="link">Сертификаты</a></li>
+                        <li><a href="#" class="link">Производство</a></li>
+                        <li><a href="#" class="link">Брендированная вода</a></li>
+                        <li><a href="#" class="link">Экскурсия</a></li>
+                        <li><a href="#" class="link">Оплата</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-menu__item">
+                <div class="bottom-menu__item-title">
+                    <h3>Интернет-магазин</h3>
+                </div>
+                <div class="bottom-menu__item-content">
+                    <ul class="bottom-menu__item-content-menu">
+                        <li><a href="#" class="link">Вода 19 литров</a></li>
+                        <li><a href="#" class="link">Вода ПЭТ</a></li>
+                        <li><a href="#" class="link">Кулеры и помпы</a></li>
+                        <li><a href="#" class="link">Мед</a></li>
+                        <li><a href="#" class="link">Чай, кофе, батончики</a></li>
+                        <li><a href="#" class="link">Одноразовая посуда</a></li>
+                        <li><a href="#" class="link">Пурифайеры</a></li>
+                        <li><a href="#" class="link">Сувениры</a></li>
+                        <li><a href="#" class="link">Услуги сервисного центра</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-menu__item">
+                <div class="bottom-menu__item-title">
+                    <h3>Наша жизнь</h3>
+                </div>
+                <div class="bottom-menu__item-content">
+                    <ul class="bottom-menu__item-content-menu">
+                        <li><a href="#" class="link">О компании</a></li>
+                        <li><a href="#" class="link">Блог</a></li>
+                        <li><a href="#" class="link">Новости</a></li>
+                        <li><a href="#" class="link">Контакты</a></li>
+                        <li><a href="#" class="link">Сотрудничество</a></li>
+                        <li><a href="#" class="link">Награды</a></li>
+                        <li><a href="#" class="link">Отзывы</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-menu__item">
+                <div class="bottom-menu__item-title">
+                    <h3>Сервисный центр</h3>
+                </div>
+                <div class="bottom-menu__item-content">
+                    <ul class="bottom-menu__item-content-menu">
+                        <li><a href="#" class="link">Как правильно использовать кулер</a></li>
+                        <li><a href="#" class="link">Санитарная обработка кулеров</a></li>
+                        <li><a href="#" class="link">Ремонт кулеров</a></li>
+                    </ul>
+                </div>
+                <div class="bottom-menu__item-info">
+                    <img src="images/b-bottom-menu__image-1.png" alt="image 1" class="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-wrapper">
+        <div class="footer__content">
+            <div class="footer__copyright mobile mobile--hidden">
+                2019&nbsp;Все права защищены
+            </div>
+            <div class="footer__smm-group">
+                <span class="footer__smm-group-text">мы в соцсетях</span>
+                <ul class="footer__smm-group-list">
+                    <li class="footer__smm-group-item">
+                        <img src="images/b-footer__icon-facebook.svg" alt="icon facebook" class="lazy">
+                    </li>
+                    <li class="footer__smm-group-item">
+                        <img src="images/b-footer__icon-vkontakte.svg" alt="icon vk" class="lazy">
+                    </li>
+                    <li class="footer__smm-group-item">
+                        <img src="images/b-footer__icon-insta.svg" alt="icon insta" class="lazy">
+                    </li>
+                    <li class="footer__smm-group-item">
+                        <img src="images/b-footer__icon-youtube.svg" alt="icon youtube" class="lazy">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="popup" js-popup="popup-fast-buy">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="popup__close" js-popup-switcher="popup-fast-buy"></div>
+            <form class="form form--popup">
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form-input form-input--label form-input--wide">
+                            <span class="form-input__title form__field-label">Имя</span>
+                            <input type="text" placeholder="">
+                        </label>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="form-input form-input--label form-input--wide">
+                            <span class="form-input__title form__field-label">Номер телефона</span>
+                            <input type="text" placeholder="+7 (___) ___ ____">
+                        </label>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field form__field--buttons">
+                        <div class="form__button">
+                            <button type="submit" class="button button--green button--normal">Оформить заказ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <div class="form__field-info">Наш оператор вам перезвонит и уточнит детали</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

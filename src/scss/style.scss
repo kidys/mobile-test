@@ -1,0 +1,100 @@
+$color: #5BC815;
+$color_primary: #28009F;
+
+$bgcolor_primary: $color_primary;
+
+@import 'smart-grid';
+@import 'mixins';
+@import 'extensions';
+
+html {
+  height: 100vh;
+
+  body {
+    height: 100%;
+  }
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-content {
+  position: relative;
+  z-index: 20;
+  visibility:visible;
+  height: inherit;
+  overflow: hidden;
+  background-color: #fff;
+
+  @include transition(all 0.3s ease-in);
+}
+
+#mobileMenu {
+  position: fixed;
+  z-index:10;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1C0A53;
+  overflow:hidden;
+}
+
+.navigation {
+  #burgerBtn {
+    position: fixed;
+    border-color:transparent;
+    &:before {
+      @include rotate(45deg);
+      width:25px;
+      left:0px;
+    }
+    &:after {
+      @include rotate(135deg);
+      bottom:7px;
+      width:25px;
+      left:0px;
+    }
+  }
+
+  .page-content {
+    @include opacity(0);
+    @include scale(0.85);
+    visibility:hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.container {
+  @include wrapper();
+}
+
+.container-fluid {
+  @include wrapper-full();
+
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.container, .container-fluid {
+  .row {
+    @include row-flex();
+  }
+}
+
+.test {
+
+}
+
+@import 'blocks/burgerBtn';
+@import 'blocks/header';
+@import 'blocks/banners';
+@import 'blocks/btn';

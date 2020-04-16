@@ -1,0 +1,15 @@
+.spoiler-container {
+  &__more-text {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+  }
+
+  &--opened {
+    .spoiler-container {
+      &__more-text {
+        height: auto;
+      }
+    }
+  }
+}

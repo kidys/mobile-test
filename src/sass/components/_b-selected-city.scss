@@ -1,0 +1,69 @@
+.selected-city {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: auto;
+  right: 16px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  z-index: 999;
+  width: 100%;
+  max-width: 300px;
+
+  @include tablet-block() {
+    position: absolute;
+    right: 0;
+    left: auto;
+    @include tablet-shift-right(4);
+  }
+
+  @include desktop-block() {
+    @include desktop-shift-right(4);
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  &__value {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #0D4494;
+    margin-bottom: 45px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -12px;
+
+    button {
+      flex: 1;
+      margin: 0 12px;
+      font-size: 14px;
+      line-height: 1;
+      padding: 12px;
+      white-space: nowrap;
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+}

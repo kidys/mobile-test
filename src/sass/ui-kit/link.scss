@@ -1,0 +1,38 @@
+.link {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $colorBlue;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: #370BB7;
+  }
+
+  &:active {
+    color: #240C6B;
+    text-decoration: none;
+  }
+
+  &--as-button {
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    color: $colorMain;
+    font-weight: bold;
+  }
+
+  &--disabled {
+    user-select: none;
+    cursor: none;
+    color: #9C9C9C;
+
+    &:hover, &:active {
+      color: #9C9C9C;
+      text-decoration: none;
+    }
+  }
+}

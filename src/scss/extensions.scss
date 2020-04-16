@@ -1,0 +1,33 @@
+.text {
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+}
+
+.visible {
+  &-mobile {
+    @include sm-block() {
+      display: none;
+    }
+
+    &-except {
+      display: none;
+
+      @include sm-block() {
+        display: inherit;
+      }
+    }
+  }
+}

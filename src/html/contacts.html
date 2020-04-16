@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Контакты</title>
+</head>
+<body>
+@@include('./partials/debug.html')
+
+@@include('./partials/header.html')
+@@include('./partials/nav.html')
+@@include('./partials/contacts/contacts-breadcrumbs.html')
+
+<section class="page page--no-sidebar">
+    <div class="wrapper">
+        <div class="container">
+            <div class="page__content">
+                <div class="page__heading">
+                    <h1>Контакты</h1>
+                </div>
+                <div class="contacts">
+                    <div class="contacts__section contacts__section--main">
+                        <div class="contacts__section-content">
+                            <div class="contacts__box-wrapper">
+                                <div class="contacts__box">
+                                    <div class="contacts__title">Головной офис</div>
+                                    <div class="contacts__list">
+                                        <div class="contacts__item contacts__item--address">
+                                            424000, Республика Марий Эл, г. Йошкар-Ола, ул. Школьная, д.19
+                                        </div>
+                                        <div class="contacts__item contacts__item--phone">
+                                            <a href="tel:+78362451037">+7 (8362) 45-10-37</a>
+                                        </div>
+                                        <div class="contacts__item contacts__item--email">
+                                            <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts__box">
+                                    <div class="contacts__title">Производственный комплекс</div>
+                                    <div class="contacts__list">
+                                        <div class="contacts__item contacts__item--address">
+                                            424000, Республика Марий Эл, г. Йошкар-Ола, ул. Школьная, д.19
+                                        </div>
+                                        <div class="contacts__item contacts__item--phone">
+                                            <a href="tel:+78362430276">+7 (8362) 43-02-76</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__section-map">
+                            <script>
+                                var contactsMarker = {
+                                    "location": [56.656386, 47.848889]
+                                }
+                            </script>
+                            <div id="map-contacts" class="contacts__map"></div>
+                        </div>
+                    </div>
+                    <div class="contacts__section">
+                        <p>Компания «Здоровая жизнь» занимается производством и поставкой питьевой бутилированной воды с 2001 года. Современный производственно-логистический комплекс расположен в экологически чистом регионе – Марий Эл, всего в 300 м от источника. Сотрудники компании доставляют самую вкусную питьевую воду Поволжья (именно такой статус получила «Сестрица» в результате независимой экспертизы) в дома и офисы. Сделать заказ можно по телефону, через сайт или специальное мобильное приложение.</p>
+                        <p>Мы производим и предлагаем покупателям чистую и полезную воду для здорового питания и утоления жажды, а также напитки на её основе. Стандарты качества наших продуктов соответствуют стандартам лидеров российского рынка.</p>
+                    </div>
+                    <div class="contacts__section">
+                        <div class="contacts__box-wrapper contacts__box-wrapper--row">
+                            <div class="contacts__box">
+                                <div class="contacts__title">Офис продаж в г. Йошкар-Ола</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        ул. Волкова, 141
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78362450070">+7 (8362) 45-00-70</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--worktime">
+                                        <div class="contacts__worktime">
+                                            <span>Пн-Пт</span>
+                                            <span>09:00 - 21:00</span>
+                                        </div>
+                                        <div class="contacts__worktime">
+                                            <span>Сб-Вс </span>
+                                            <span>09:00 - 19:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">Офис продаж в г. Казань</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        ул. Восстания, 58
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78435557171">+7 (843) 555-71-71</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--worktime">
+                                        <div class="contacts__worktime">
+                                            <span>Пн-Пт</span>
+                                            <span>08:00 - 20:00</span>
+                                        </div>
+                                        <div class="contacts__worktime">
+                                            <span>Сб-Вс </span>
+                                            <span>09:00 - 17:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">Офис продаж в г. Чебоксары</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        ул. Ленинского Комсомола, 68/1
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78352257700">+7 (8352) 25-77-00</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--worktime">
+                                        <div class="contacts__worktime">
+                                            <span>Пн-Пт</span>
+                                            <span>08:00 - 20:00</span>
+                                        </div>
+                                        <div class="contacts__worktime">
+                                            <span>Сб-Вс </span>
+                                            <span>выходной</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">Офис продаж в г. Новочебоксарск</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        ул. Винокурова, д 105а
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78352772525">+7 (8352) 77-25-25</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--worktime">
+                                        <div class="contacts__worktime">
+                                            <span>Пн-Пт</span>
+                                            <span>08:00 - 21:00</span>
+                                        </div>
+                                        <div class="contacts__worktime">
+                                            <span>Сб-Вс </span>
+                                            <span>09:00 - 20:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">Офис продаж в г. Нижний Новгород</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        ул. Воротынская, 2
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78312570777">+7 (831) 257-07-77</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--worktime">
+                                        <div class="contacts__worktime">
+                                            <span>Пн-Пт</span>
+                                            <span>06:00 - 19:00</span>
+                                        </div>
+                                        <div class="contacts__worktime">
+                                            <span>Сб-Вс </span>
+                                            <span>06:00 - 15:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">Офис продаж в г. Уфа</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        Уфимский район, с. Нижегородка, ул. Кузнецовская поляна, стр.19
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+73472704740">+7 (347) 2-704-740</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:online@vodaufa.ru">online@vodaufa.ru</a>
+                                    </div>
+                                    <div class="contacts__item contacts__item--worktime">
+                                        <div class="contacts__worktime">
+                                            <span>Пн-Пт</span>
+                                            <span>09:00 - 18:00</span>
+                                        </div>
+                                        <div class="contacts__worktime">
+                                            <span>Сб-Вс </span>
+                                            <span>10:00 - 17:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__section">
+                        <div class="contacts__box contacts__box--no-margin contacts__box--support">
+                            <div class="contacts__title">Служба поддержки сайта</div>
+                            <div class="contacts__list">
+                                <div class="contacts__item contacts__item--phone">
+                                    <a href="tel:+78362451037">+7 (8362) 45-10-37 доб. 121</a>
+                                </div>
+                                <div class="contacts__item contacts__item--email">
+                                    <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__section">
+                        <h2>Дилерам</h2>
+                        <div class="contacts__documents">
+                            <div class="contacts__documents-item">
+                                <a href="#" class="contacts__documents-link">Дилерский договор.docx</a>
+                            </div>
+                            <div class="contacts__documents-item">
+                                <a href="#" class="contacts__documents-link">Сертификаты на воду</a>
+                            </div>
+                            <div class="contacts__documents-item">
+                                <a href="#" class="contacts__documents-link">Дилерский договор.docx</a>
+                            </div>
+                            <div class="contacts__documents-item">
+                                <a href="#" class="contacts__documents-link">Сертификаты на воду</a>
+                            </div>
+                        </div>
+                        <div class="contacts__info">
+                            <div class="contacts__info-item contacts__info-item--collaborate">
+                                <h3>Приглашаем к сотрудничеству</h3>
+                                <p>Вы можете организовать продажу воды в Вашем городе. Мы предлагаем весь ассортимент воды, а также кулеры, помпы и все сопутствующие товары по очень привлекательным ценам. Отгрузка производится со склада в Йошкар-Оле или в любом городе, где есть наш филиал, либо с доставкой на склад покупателя. Наши дилеры в городах России.</p>
+                            </div>
+                            <div class="contacts__info-item contacts__info-item--opportunities">
+                                <h3>Дополнительные возможности</h3>
+                                <ul class="list">
+                                    <li>размещение информации о дилере на официальном сайте Сестрицы;</li>
+                                    <li>снабжение фирменной печатной и сувенирной продукцией;</li>
+                                    <li>помощь в разработке концепции развития и продвижения;</li>
+                                    <li>содействие в обучении персонала;</li>
+                                    <li>помощь во внедрении специализированных программных продуктов (1С Доставка, Фин Эксперт и пр.);</li>
+                                    <li>проведение экскурсий на производство.</li>
+                                </ul>
+                            </div>
+                            <div class="contacts__info-item contacts__info-item--connect">
+                                <h3>Контакты</h3>
+                                <p>По всем вопросам, связанным с сотрудничеством с нашей компанией, пишите</p>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--email">
+                                        <a href="mailto:sales@voda-sestrica.ru">sales@voda-sestrica.ru</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts__section">
+                        <h2>Список дилеров</h2>
+                        <div class="contacts__box-wrapper contacts__box-wrapper--row">
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Низамиев Р.А.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Зеленодольск, ул. Комсомольская, д. 11
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+79272404353">+7 927 240-43-53</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ООО "Кроностар"</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Воронеж
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+79677576350">+7 967 757-63-50</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Евстигнеев А.И.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Павлово, ул . Красноармейская 20-б
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+7364571115">+7 (3645) 7-11-15</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Ганцов И.Е.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Ульяновск, пр. Созидателей, д. 13а, оф. 100
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78422720808">+7 (8422) 72-08-08</a> (Екатерина)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Лядов С. Г.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        п. Камское Устье
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+79173965203">+7 917 396-52-03</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Манянина Л.В.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Звенигово, ул. Вершинина, д.73
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+7364571115">+7 (3645) 7-11-15</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Бадьянов В.Г.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Богородск, ул. Ленина, д. 101
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78317028844">+7 (83170) 2-88-44</a><br>
+                                        <a href="tel:+79108888085">+7 (910) 888-80-85</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Плотников Р. Е.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Кстово
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78314521121">+7 (83145) 21-121</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ООО "Эл-аква"</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Москва
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+74991364116">+7 (499) 136-41-16</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ООО "Живой источник"</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Бор, ул.Октябрьская, д.4
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+78315999948">+7 (83159) 9-99-48</a><br>
+                                        <a href="tel:+79519136078">+7 (951) 913-60-78</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Козел Е.В.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Чебоксары
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+79278588927">+7 (927) 858-89-27</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ООО "Аква Сервис"</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Электросталь, Строительный пер., д.5, зд.5
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+79851414688">+7 (985) 141 46 88</a><br>
+                                        <a href="tel:+79260606677">+7 (926) 060 66 77</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contacts__box">
+                                <div class="contacts__title">ИП Щепетов Н.А.</div>
+                                <div class="contacts__list">
+                                    <div class="contacts__item contacts__item--address">
+                                        г. Павлово, ул. Кирова, 28
+                                    </div>
+                                    <div class="contacts__item contacts__item--phone">
+                                        <a href="tel:+79519070876">+7 (951) 907-08-76</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('./partials/water/water-form.html')
+</section>
+
+@@include('./partials/bottom-menu.html')
+@@include('./partials/footer.html')
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/style.min.css?v=3.5">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="js/main.min.js?version=3.5"></script>
+</body>
+</html>

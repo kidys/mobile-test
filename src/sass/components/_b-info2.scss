@@ -1,0 +1,117 @@
+.info2 {
+  padding-top: 40px;
+
+  @include desktop-block() {
+    margin-top: 33px;
+  }
+
+  @include tablet-block() {
+    margin-top: 17px;
+  }
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @include desktop-block() {
+      background-image: url(../images/info2__background-image-1.svg);
+      background-position: 46% top;
+      background-size: initial;
+      background-repeat: no-repeat;
+    }
+
+    @include tablet-block() {
+      padding: 0;
+    }
+  }
+
+  &__left {
+    @include col();
+    @include size-desktop(5);
+    @include size-tablet(4);
+    @include size-mobile(1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    @include col();
+    @include size-desktop(7);
+    @include size-tablet(4);
+    @include size-mobile(1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    @include tablet-block() {
+      padding-left: 15px;
+    }
+
+    .button {
+      margin-bottom: 32px;
+      max-width: 152px;
+
+      @include tablet-block() {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      margin: 16px 0 0 0;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 25px;
+      color: $colorBottomMenuTitle;
+
+      @include  tablet('margin-top', 0);
+    }
+
+    &-text {
+      margin: 14px 0 16px 0;
+
+      @include tablet-block() {
+        margin: 16px 0 22px 0;
+      }
+
+      p {
+        display: none;
+        margin: 10px 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: $colorBottomMenuTitle;
+
+        @include tablet-block() {
+          display: block;
+        }
+
+        &:first-child {
+          display: block;
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

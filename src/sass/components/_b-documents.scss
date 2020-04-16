@@ -1,0 +1,68 @@
+.documents {
+  &--slider {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 16px;
+    width: 100%;
+
+    .owl-nav {
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .owl-prev, .owl-next {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    .owl-dots {
+      display: none;
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+
+    .owl-stage-outer {
+      z-index: 1;
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 12px;
+    height: 100%;
+
+    picture, img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

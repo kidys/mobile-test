@@ -1,0 +1,107 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+
+  @include tablet-block() {
+    justify-content: flex-end;
+    margin-top: 40px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 -4px;
+  }
+
+  &__item {
+    margin: 0 4px;
+  }
+
+  &__link {
+    background: $bgColorWhite;
+    border: 1px solid $colorLines;
+    border-radius: 2px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    color: $colorBlack;
+    text-decoration: none;
+
+    &:hover, &--active {
+      background: $bgColorGreen;
+      border-color: $bgColorGreen;
+      color: $colorWhite;
+    }
+
+    &--prev {
+      &:before {
+        content: '';
+        display: block;
+        background: url('../images/b-pagination__icon-arrow-left.svg') no-repeat center left;
+        width: 8px;
+        height: 10px;
+      }
+
+      &:hover {
+        &:before {
+          background-image: url('../images/b-pagination__icon-arrow-left--hover.svg');
+        }
+      }
+
+      &.pagination {
+        &__link {
+          &--disabled {
+            &:before {
+              background-image: url('../images/b-pagination__icon-arrow-left--disabled.svg');
+            }
+          }
+        }
+      }
+    }
+
+    &--next {
+      &:before {
+        content: '';
+        display: block;
+        background: url('../images/b-pagination__icon-arrow-right.svg') no-repeat center right;
+        width: 8px;
+        height: 10px;
+      }
+
+      &:hover {
+        &:before {
+          background-image: url('../images/b-pagination__icon-arrow-right--hover.svg');
+        }
+      }
+
+      &.pagination {
+        &__link {
+          &--disabled {
+            &:before {
+              background-image: url('../images/b-pagination__icon-arrow-right--disabled.svg');
+            }
+          }
+        }
+      }
+    }
+
+    &--disabled {
+      cursor: default;
+      color: $colorLines;
+
+      &:hover {
+        background: $bgColorWhite;
+        border: 1px solid $colorLines;
+        color: $colorLines;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<header class="header">
+    <div class="header-wrapper">
+        <div class="header__content">
+            <div class="header__logo">
+                <img src="images/b-header__logo.svg" alt="logo image" class="header__logo-image mobile mobile--hidden lazy">
+                <img src="images/b-header__logo--mobile.svg" alt="logo image mobile" class="header__logo-image mobile mobile--visible lazy">
+                <span class="header__logo-image-title">Вода из<br/>Марий Эл</span>
+            </div>
+            <div class="header__location mobile mobile--hidden">
+                <div class="header__location-city" data-action="select-city">
+                    <img src="images/b-header__icon-map.svg" alt="icon map" class="header__location-city-image lazy">
+                    <span class="header__location-city-title">
+                        <span>Йошкар-Ола</span>
+                    </span>
+                </div>
+                <div class="header__location-link">
+                    <a href="#" class="link">Пункты продаж</a>
+                </div>
+            </div>
+            <div class="header__phone mobile mobile--hidden">
+                <div class="header__phone-group">
+                    <img src="images/b-header__icon-phone.svg" alt="icon phone" class="header__phone-image lazy">
+                    <span class="header__phone-number">(8362) 45-00-77</span>
+                </div>
+                <div class="header__phone-link">
+                    <a href="#" class="link">Условия доставки</a>
+                </div>
+            </div>
+            <div class="header__actions">
+                <div class="header__actions-button-water-order mobile mobile--hidden">
+                    <a href="#" class="button button--blue header__btn">Заказать воду</a>
+                </div>
+                <div class="header__actions-buttons-group mobile mobile--visible">
+                    <ul class="header__actions-buttons-group-list">
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="javascript:void(0)" class="header__actions-buttons-group-list-link" data-name="user account">
+                                <img src="images/b-header__icon-user-account.svg" alt="icon user account" class="lazy">
+                            </a>
+                        </li>
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="javascript:void(0)" class="header__actions-buttons-group-list-link" data-name="user account" data-status="is-authorized">
+                                <img src="images/b-header__icon-user-account.svg" alt="icon user account" class="lazy">
+                            </a>
+                        </li>
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="#" class="header__actions-buttons-group-list-link">
+                                <img src="images/b-header__icon-cart.svg" alt="icon cart" class="lazy">
+                                <span class="header__actions-buttons-group-list-link-label">99</span>
+                            </a>
+                        </li>
+                        <li class="header__actions-buttons-group-list-item">
+                            <a href="#" class="header__actions-buttons-group-list-link" data-name="menu">
+                                <!--<img src="images/b-header__icon-menu-open--mobile.svg" alt="icon menu" class="lazy">-->
+                                <div class="burger">
+                                    <div class="burger-content">
+                                        <div class="burger__line burger__line--top">&nbsp;</div>
+                                        <div class="burger__line burger__line--bottom">&nbsp;</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @@include('./select-city.html')
+            @@include('./selected-city.html')
+        </div>
+        @@include('./lk/lk-authentication.html')
+        @@include('./lk/lk-logout.html')
+    </div>
+</header>

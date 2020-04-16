@@ -1,0 +1,33 @@
+{
+  "name": "html_css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "node_modules/.bin/gulp",
+    "smart-grid": "node sg-config.js",
+    "html-build": "npm run gulp html_build",
+    "start": "npm run smart-grid && npm run gulp scss && npm run images-build && npm run gulp js_scripts && npm run html-build",
+    "images-build": "npm run gulp cleanimg && npm run gulp moving_svg_files && npm run gulp img-responsive-2x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.1.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-jpeg-2000": "^1.1.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-responsive": "^3.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^2.0.0",
+    "path": "^0.12.7",
+    "selectric": "^1.13.0",
+    "smart-grid": "^2.1.2"
+  }
+}

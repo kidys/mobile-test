@@ -1,0 +1,211 @@
+.button {
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 13px 11px;
+  margin: 0 0 2px 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background-color: transparent;
+  border-radius: 28px;
+  position: relative;
+
+  text-decoration: none;
+  //text-transform: uppercase;
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  box-sizing: border-box;
+
+  border: 1px solid transparent;
+  transition: all .3s;
+  z-index: 1;
+
+  &:hover:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    width: 80%;
+    background-color: transparent;
+    height: 2px;
+    filter: blur(4px);
+    opacity: 0;
+    transition: all .3s;
+    z-index: -1;
+  }
+
+  &--default {
+    border-radius: 2px;
+    background: $bgColorButtonDefault;
+    color: $colorButtonDefault;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 13px;
+    border: none;
+  }
+
+  &--normal {
+    font-size: 16px;
+    line-height: 1;
+    padding: 11px 22px;
+    margin: 0;
+  }
+
+  &--green {
+    color: $colorWhite;
+    background-color: $bgColorGreen;
+
+    &:hover {
+      background-color: #8CF548;
+    }
+
+    &:hover:after {
+      background-color: $bgColorGreen;
+      opacity: 0.34;
+    }
+
+    &:active {
+      background-color: #49A40E;
+    }
+
+    &_disabled {
+      background-color: #E8E8E8;
+      color: #9C9C9C;
+      user-select: none;
+      cursor: none;
+    }
+  }
+
+  &--blue {
+    color: $colorWhite;
+    background-color: $bgColorBlue;
+
+    &:hover {
+      background-color: #5529DA;
+    }
+
+    &:hover:after {
+      background-color: $bgColorBlue;
+      opacity: 0.34;
+    }
+
+    &:active {
+      background-color: #240C6B;
+    }
+
+    &_disabled {
+      background-color: #E8E8E8;
+      color: #9C9C9C;
+      user-select: none;
+      cursor: none;
+    }
+  }
+
+  &--outlined {
+    color: $colorBlue;
+    background-color: $bgColorWhite;
+    border-color: $bgColorBlue;
+
+    &:hover {
+      background-color: #370BB7;
+    }
+
+    &:hover {
+      background-color: #5529DA;
+      color: $colorWhite;
+
+      &:after {
+        background-color: $bgColorBlue;
+        opacity: 0.34;
+      }
+    }
+
+    &:active {
+      background-color: #240C6B;
+      color: $colorWhite;
+    }
+
+    &_disabled {
+      background-color: $bgColorWhite;
+      border-color: #E8E8E8;
+      color: #9C9C9C;
+      user-select: none;
+      cursor: none;
+    }
+
+    &.button {
+      &--green {
+        color: $colorGreen;
+        background-color: $bgColorWhite;
+        border-color: $bgColorGreen;
+
+        &:hover {
+          background-color: #8CF548;
+          color: $colorWhite;
+
+          &:after {
+            background-color: $bgColorGreen;
+            opacity: 0.34;
+          }
+        }
+
+        &:active {
+          background-color: #49A40E;
+          color: $colorWhite;
+        }
+
+        &_disabled {
+          background-color: $bgColorWhite;
+          border-color: #E8E8E8;
+          color: #9C9C9C;
+          user-select: none;
+          cursor: none;
+        }
+      }
+    }
+  }
+
+  &--transparent {
+    color: $colorWhite;
+    background-color: transparent;
+    border-color: $bgColorWhite;
+
+    &:hover {
+      background-color: $bgColorWhite;
+      color: #5529DA;
+
+      &:after {
+        background-color: $bgColorWhite;
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      background-color: $bgColorWhite;
+      color: #240C6B;
+    }
+
+    &_disabled {
+      background-color: $bgColorWhite;
+      border-color: $bgColorWhite;
+      color: #9C9C9C;
+      user-select: none;
+      cursor: none;
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--wide {
+    width: 100%;
+  }
+}

@@ -1,0 +1,56 @@
+.price {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__value {
+    display: flex;
+    font-size: 32px;
+    line-height: 37px;
+    color: $colorPrice;
+    font-weight: bold;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:after {
+      content: '\20BD';
+      display: block;
+      margin-left: 18px;
+      font-weight: normal;
+    }
+
+    &--medium {
+      font-size: 24px;
+      line-height: 28px;
+
+      &:after {
+        margin-left: 5px;
+      }
+    }
+
+    &--small {
+      font-size: 18px;
+      line-height: 21px;
+
+      &:after {
+        margin-left: 5px;
+      }
+    }
+
+    &--no-currency {
+      &:after {
+        display: none;
+      }
+    }
+
+    &--old {
+      color: $colorOldPrice;
+
+      span {
+        text-decoration: line-through;
+      }
+    }
+  }
+}

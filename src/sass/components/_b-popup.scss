@@ -1,0 +1,52 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+  background: rgba(#000, .2);
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+  }
+
+  &__content {
+    position: relative;
+    box-sizing: border-box;
+    padding: 48px 24px 24px;
+    background: #fff;
+    border-radius: 4px;
+    margin: auto;
+    flex: 1;
+
+    @include tablet-block() {
+      flex: 0 0 400px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background: url('../images/close-icon.svg') no-repeat center center;
+  }
+
+  &--active {
+    display: block;
+  }
+}

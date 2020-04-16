@@ -1,0 +1,84 @@
+.form-input {
+  &__title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: $colorWhite;
+    border: 0.5px solid rgba(63, 61, 86, 0.2);
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 10px;
+    transition: all 0.3s;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: $colorBottomMenuTitle;
+
+    &:hover {
+      border-color: rgba(63, 61, 86, 0.45);
+    }
+
+    &:focus {
+      border-color: $colorBottomMenuTitle;
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: 80px;
+    resize: vertical;
+  }
+
+  &--with-icon {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: 7px;
+      width: 16px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      padding-left: 35px;
+    }
+  }
+
+  &--wide {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+      width: 100%;
+    }
+  }
+
+  &--large {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+      height: 48px;
+    }
+  }
+
+  &--chat {
+    input[type="text"], textarea {
+      padding-right: 48px;
+    }
+  }
+
+  &--disabled {
+    input[type="text"], input[type="email"], input[type="password"], textarea {
+      &, &:hover, &:focus {
+        border-color: rgba(63, 61, 86, 0.16);
+        user-select: none;
+        cursor: none;
+      }
+    }
+  }
+}

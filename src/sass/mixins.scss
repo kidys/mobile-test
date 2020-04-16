@@ -1,0 +1,272 @@
+@mixin desktop-shift-left($n){
+  $val: 100% / $columnsDesktop * $n;
+  margin-left: #{calc(#{$val} + #{$offsetDesktopOneSide})};
+}
+
+@mixin desktop-shift-right($n){
+  $val: 100% / $columnsDesktop * $n;
+  margin-right: #{calc(#{$val} + #{$offsetDesktopOneSide})};
+}
+
+@mixin tablet-shift-left($n){
+  $val: 100% / $columnsTablet * $n;
+  margin-left: #{calc(#{$val} + #{$offsetTabletOneSide})};
+}
+
+@mixin tablet-shift-right($n){
+  $val: 100% / $columnsTablet * $n;
+  margin-right: #{calc(#{$val} + #{$offsetTabletOneSide})};
+}
+
+@mixin desktop($name, $value) {
+  @media screen and (min-width: $breakDesktop) {
+    #{$name}: $value;
+  }
+}
+
+@mixin desktop-block() {
+  @media screen and (min-width: $breakDesktop) {
+    @content;
+  }
+}
+
+@mixin tablet($name, $value) {
+  @media screen and (min-width: $breakTablet) {
+    #{$name}: $value;
+  }
+}
+
+@mixin tablet-block() {
+  @media screen and (min-width: $breakTablet) {
+    @content;
+  }
+}
+
+@mixin mobile($name, $value) {
+  @media screen and (min-width: $breakMobile) {
+    #{$name}: $value;
+  }
+}
+
+@mixin mobile-block() {
+  @media screen and (min-width: $breakMobile) {
+    @content;
+  }
+}
+
+@mixin size-mobile($n) {
+  $val: 100% / ($columnsMobile * $n);
+  @include mobile(width, #{calc(#{$val} - #{$offsetMobile})});
+}
+
+@mixin size-tablet($n) {
+  $val: 100% / $columnsTablet * $n;
+  @include tablet(width, #{calc(#{$val} - #{$offsetTablet})});
+}
+
+@mixin size-desktop($n) {
+  $val: 100% / $columnsDesktop * $n;
+  @include desktop(width, #{calc(#{$val} - #{$offsetDesktop})});
+}
+
+@mixin col-offsets($type) {
+  @include desktop-block() {
+    #{$type}-left: $offsetDesktopOneSide;
+    #{$type}-right: $offsetDesktopOneSide;
+  }
+
+  @include tablet-block() {
+    #{$type}-left: $offsetTabletOneSide;
+    #{$type}-right: $offsetTabletOneSide;
+  }
+
+  @include mobile-block() {
+    #{$type}-left: $offsetMobileOneSide;
+    #{$type}-right: $offsetMobileOneSide;
+  }
+}
+
+@mixin col() {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  @include col-offsets(margin);
+}
+
+@mixin row-offsets() {
+  @include desktop-block() {
+    margin-left: ($offsetDesktopOneSide * -1);
+    margin-right: ($offsetDesktopOneSide * -1);
+  }
+
+  @include tablet-block() {
+    margin-left: ($offsetTabletOneSide * -1);
+    margin-right: ($offsetTabletOneSide * -1);
+  }
+
+  @include mobile-block() {
+    margin-left: ($offsetMobileOneSide * -1);
+    margin-right: ($offsetMobileOneSide * -1);
+  }
+}
+
+@mixin row-flex() {
+  display: flex;
+  flex-wrap: wrap;
+  @include row-offsets();
+}
+
+@mixin container-wrapper() {
+  max-width: $maxWidth;
+  margin: 0;
+  box-sizing: border-box;
+
+  @include desktop-block() {
+    margin-left: $fieldsDesktop;
+    margin-right: $fieldsDesktop;
+  }
+
+  @include tablet-block() {
+    margin-left: $fieldsTablet;
+    margin-right: $fieldsTablet;
+  }
+
+  @include mobile-block() {
+    margin-left: $fieldsMobile;
+    margin-right: $fieldsMobile;
+  }
+}
+
+.tablet {
+  @include desktop-block() {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &--visible {
+    @include tablet-block() {
+      position: static;
+      visibility: visible;
+    }
+  }
+
+  &--hidden {
+    @include desktop-block() {
+      position: static;
+      visibility: visible;
+    }
+
+    @include tablet-block() {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+}
+
+.desktop {
+  position: absolute;
+  visibility: hidden;
+
+  &--visible {
+    @include desktop-block() {
+      position: static;
+      visibility: visible;
+    }
+  }
+}
+
+.mobile {
+  @include tablet-block() {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &--visible {
+    @include mobile-block() {
+      position: static;
+      visibility: visible;
+    }
+  }
+
+  &--hidden {
+    @include tablet-block() {
+      position: static;
+      visibility: visible;
+    }
+
+    @include mobile-block() {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+}
+
+@mixin debug($background, $outline) {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 999;
+
+  & > * {
+    @include container-wrapper();
+
+    height: inherit;
+    background-color: rgba(100, 100, 100, .05);
+    outline: $outline;
+    outline-style: dashed;
+    outline-color: rgb(100, 100, 100);
+
+    & > * {
+      @include row-flex();
+
+      height: inherit;
+      background-color: rgba(150, 150, 180, .08);
+      outline: $outline;
+      outline-style: dashed;
+      outline-color: rgb(150, 150, 180);
+
+      & > * {
+        @include col();
+        @include size-desktop(1);
+        @include size-tablet(1);
+        @include size-mobile(1);
+
+        @include desktop-block() {
+          @for $numberColumn from 1 through $columnsDesktop {
+            &:nth-child(#{$numberColumn}) {
+              display: flex;
+            }
+          }
+        }
+
+        @include tablet-block() {
+          @for $numberColumn from 1 through $columnsDesktop {
+            &:nth-child(#{$numberColumn}) {
+              @if $numberColumn > 8 {
+                display: none;
+              } @else {
+                display: flex;
+              }
+            }
+          }
+        }
+
+        @include mobile-block() {
+          @for $numberColumn from 1 through $columnsDesktop {
+            &:nth-child(#{$numberColumn}) {
+              @if $numberColumn > 1 {
+                display: none;
+              } @else {
+                display: none;
+              }
+            }
+          }
+        }
+
+        height: inherit;
+        background-color: $background;
+        outline: $outline;
+      }
+    }
+  }
+}

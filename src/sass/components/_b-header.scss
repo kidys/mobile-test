@@ -1,0 +1,333 @@
+.header {
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+
+  @include tablet-block() {
+    height: 88px;
+    background-color: $bgColorWhite;
+  }
+
+  @include mobile-block() {
+    height: 72px;
+    background-color: $bgColorGreen;
+  }
+
+  &-wrapper {
+    position: relative;
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__btn {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+    text-transform: initial !important;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include tablet-block() {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__logo {
+    @include col();
+    @include size-desktop(2);
+    @include size-tablet(2);
+    @include size-mobile(2);
+
+    display: flex;
+    align-items: center;
+
+    &-image {
+      width: 40px;
+      height: 41px;
+
+      @include desktop-block() {
+        height: 68px;
+      }
+
+      @include tablet-block() {
+        width: 67px;
+        height: 70px;
+      }
+
+      &-title {
+        color: $colorWhite;
+        padding-left: 10px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 600;
+
+        @include tablet-block() {
+          color: $colorBlue;
+          line-height: 22px;
+          padding-left: 14px;
+        }
+      }
+    }
+  }
+
+  &__location {
+    @include col();
+    @include size-desktop(2);
+    @include size-tablet(2);
+
+    @include desktop-block() {
+      @include desktop-shift-left(4);
+    }
+
+    @include tablet('padding', 12px 10px 12px 0px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    &-link {
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &-city {
+      display: flex;
+      align-items: center;
+
+      &-image {
+        @include desktop('margin-right', 13px);
+
+        @include tablet-block() {
+          width: 13px;
+          height: 18px;
+          margin-right: 8px;
+        }
+      }
+
+      &-title {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          @include desktop-block() {
+            font-size: 18px;
+            line-height: 20px;
+          }
+
+          @include tablet-block() {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 18px;
+            border-bottom: 1px dashed $bgColorBlue;
+            color: $colorBlue;
+          }
+        }
+
+        &:after {
+          content: '';
+          background: url('../images/b-header__city-icon.svg') 0 0 no-repeat;
+          background-size: contain;
+          width: 6px;
+          height: 6px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    @include col();
+    @include size-desktop(2);
+    @include size-tablet(2);
+
+    @include tablet('padding', 12px 10px 12px 0px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    &-link {
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &-group {
+      display: flex;
+      align-items: center;
+    }
+
+    &-image {
+      @include desktop('margin-right', 13px);
+
+      @include tablet-block() {
+        width: 10px;
+        height: 18px;
+        margin-right: 8px;
+      }
+    }
+
+    &-number {
+      @include desktop-block() {
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      @include tablet-block() {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        border-bottom: 1px dashed transparent;
+        color: $colorBlue;
+      }
+    }
+  }
+
+  &__actions {
+    @include col();
+    @include size-desktop(2);
+    @include size-tablet(2);
+    @include size-mobile(2);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-button-water-order {
+      a {
+        height: 40px;
+        width: 168px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    &-buttons-group-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include tablet-block() {
+        width: 120px;
+        height: inherit;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet-block() {
+          width: 40px;
+          height: inherit;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      &-link {
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+
+        position: relative;
+        width: 24px;
+        height: 16px;
+
+        @include tablet-block() {
+          margin: 0;
+          height: inherit;
+          width: 100%;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 0 !important;
+        }
+
+        .burger {
+          &--isOpen, &--opened {
+            position: fixed;
+            z-index: 999;
+          }
+        }
+
+        &[data-name='user account'] {
+          margin-left: 0;
+        }
+
+        &[data-name='menu'] {
+          margin-right: 0;
+        }
+
+        img {
+          &[alt='icon user account'] {
+            width: 16px;
+            height: 17px;
+          }
+
+          &[alt='icon cart'] {
+            width: 19px;
+            height: 17px;
+          }
+
+          &[alt='icon menu'] {
+            width: 24px;
+            height: 16px;
+          }
+        }
+
+        &-label {
+          background: $colorRed;
+          border-radius: 6px;
+          font-size: 9px;
+          line-height: 9px;
+          text-align: center;
+          color: #fff;
+          display: block;
+          position: absolute;
+          top: -7px;
+          right: -8px;
+          padding: 2px 4px;
+
+          @include tablet-block() {
+            top: 5px;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

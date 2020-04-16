@@ -1,0 +1,94 @@
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+@media all and (max-width: #{$breakMobile - 1px}) {
+  *, *:before, *:after {
+    display: none !important;
+  }
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: border-box;
+  min-width: $breakMobile;
+  color: $colorMain;
+
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  .main-content {
+    flex-grow: 2;
+  }
+}
+
+body {
+  &.body {
+    &--modal-active {
+      overflow: hidden;
+    }
+  }
+}
+
+.debug {
+  @include debug(rgba(255, 0, 0, .1), 1px solid rgb(255, 0, 0));
+}
+
+@import 'components/b-wrapper';
+@import 'components/b-container';
+@import 'components/b-btn';
+@import 'components/b-burger';
+@import 'components/b-header';
+@import 'components/b-top-navigation';
+@import 'components/b-breadcrumbs';
+@import 'components/b-catalog';
+@import 'components/b-pagination';
+@import 'components/b-page';
+@import 'components/b-banners';
+@import 'components/b-product-list';
+@import 'components/b-popular';
+@import 'components/b-stocks';
+@import 'components/b-reviews';
+@import 'components/b-info1';
+@import 'components/b-blog';
+@import 'components/b-info2';
+@import 'components/b-download-app';
+@import 'components/b-info3';
+@import 'components/b-bottom-menu';
+@import 'components/b-footer';
+@import 'components/b-price';
+@import 'components/b-other-product';
+@import 'components/b-spoiler-container';
+@import 'components/b-sanitation';
+@import 'components/b-articles-list';
+@import 'components/b-shopping-cart';
+@import 'components/b-lk';
+@import 'components/b-count';
+@import 'components/b-block';
+@import 'components/b-testimonials';
+@import 'components/b-form';
+@import 'components/b-select-city';
+@import 'components/b-selected-city';
+@import 'components/b-points';
+@import 'components/b-popup';
+@import 'components/b-documents';
+@import 'components/b-contacts';
+@import 'components/b-delivery';
+@import 'components/b-video';
+
+@import 'components/b-toast';
+@import 'ui-kit/ui-kit';
+@import 'ui-kit/button';
+@import 'ui-kit/checkbox';
+@import 'ui-kit/form-input';
+@import 'node_modules/selectric/src/selectric';
+@import 'ui-kit/select-component';
+@import 'ui-kit/link';
+//@import 'ui-kit/breadcrumbs';

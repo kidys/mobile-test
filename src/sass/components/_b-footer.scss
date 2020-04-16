@@ -1,0 +1,88 @@
+.footer {
+  height: 56px;
+  background-color: $bgColorFooter;
+
+  &-wrapper {
+    @include container-wrapper();
+
+    height: inherit;
+  }
+
+  &__content {
+    @include row-flex();
+
+    height: inherit;
+    justify-content: space-between;
+    padding: 0 15px;
+
+    @include tablet('padding', 0);
+  }
+
+  &__copyright {
+    @include col();
+    @include size-desktop(6);
+    @include size-tablet(4);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $colorWhite;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    width: auto;
+  }
+
+  &__smm-group {
+    @include col();
+    @include size-desktop(6);
+    @include size-tablet(4);
+    @include size-mobile(1);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &-text {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      color: $colorWhite;
+      margin-right: 30px;
+    }
+
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-item {
+      margin: 0 8px;
+      line-height: 0;
+      cursor: pointer;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        height: 16px;
+        width: 16px;
+        line-height: 0;
+
+        &[alt='icon youtube'] {
+          width: 22px;
+        }
+      }
+    }
+  }
+}

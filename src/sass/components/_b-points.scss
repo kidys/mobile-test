@@ -1,0 +1,166 @@
+.points {
+  &__tabs {
+    display: flex;
+
+    @include tablet-block() {
+      display: none;
+    }
+
+    &-item {
+
+    }
+  }
+
+  &__content {
+    position: relative;
+    @include row-flex();
+  }
+
+  &__list {
+    @include col();
+    @include size-mobile(1);
+    @include size-tablet(3);
+    @include size-desktop(4);
+
+    &-contacts {
+      flex: 1;
+    }
+
+    &-item {
+      border: 1px solid $colorLines;
+
+      &:not(:first-child) {
+        margin-top: -1px;
+      }
+
+      &-info {
+        display: flex;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 16px;
+        min-height: 60px;
+        cursor: pointer;
+      }
+
+      &-address {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        padding: 13px 20px;
+        min-height: 60px;
+
+        &:before {
+          flex: 0 0 14px;
+          content: '';
+          display: block;
+          width: 14px;
+          height: 19px;
+          margin-right: 16px;
+          background: url('../images/pin.svg') no-repeat center center;
+        }
+      }
+
+      &-worktime {
+        display: none;
+        position: relative;
+        padding: 0 20px 24px 50px;
+
+        &:before {
+          background-image: url('../images/contacts__time.svg');
+          content: '';
+          display: block;
+          position: absolute;
+          top: -3px;
+          left: 15px;
+          width: 24px;
+          height: 24px;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &-number {
+        flex: 0 0 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FDFDFD;
+        background: $bgColorGreen;
+        border-right: 1px solid $colorLines;
+      }
+
+      &-map {
+        display: none;
+        height: 400px;
+
+        @include col();
+        @include size-mobile(1);
+        @include size-tablet(5);
+        @include size-desktop(8);
+
+        @include tablet-block() {
+          display: none;
+          position: absolute;
+          height: 500px;
+          top: 0;
+          right: 0;
+        }
+
+        @include desktop-block() {
+          height: 700px;
+        }
+      }
+
+      &-ymap {
+        height: 100%;
+      }
+
+      &--active {
+        .points {
+          &__list {
+            &-item {
+              &-map {
+                display: block;
+              }
+              &-worktime {
+                display: block;
+
+                @include tablet-block() {
+                  display: none;
+                }
+              }
+
+              &-info {
+                cursor: default;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__worktime {
+    display: flex;
+    justify-content: space-between;
+    max-width: 190px;
+  }
+
+  &__map {
+    @include col();
+    @include size-mobile(1);
+    @include size-tablet(5);
+    @include size-desktop(8);
+
+    display: none;
+
+    @include tablet-block() {
+      display: block;
+      height: 500px;
+    }
+
+    @include desktop-block() {
+      height: 700px;
+    }
+  }
+}

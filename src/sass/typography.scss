@@ -1,0 +1,61 @@
+h1 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  padding: 0;
+  margin: 8px 0;
+  color: $colorMain;
+
+  @include tablet-block() {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    padding-left: 12px;
+    position: relative;
+    color: $colorMain;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: $colorMain;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      border-radius: 50%;
+    }
+  }
+}
+
+ol {
+  &.list {
+    padding-left: 16px;
+    list-style: decimal;
+
+    li {
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+}

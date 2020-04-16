@@ -1,0 +1,21 @@
+@mixin kontur() {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, .2);
+  margin: 1rem auto;
+}
+
+@mixin transition($params) {
+  transition: $params;
+}
+
+@mixin rotate($params) {
+  transform: rotate($params);
+}
+
+@mixin scale($params) {
+  transform: scale($params);
+}
+
+@mixin opacity($opacity) {
+  opacity:$opacity;
+}
